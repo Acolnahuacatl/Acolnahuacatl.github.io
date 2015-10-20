@@ -1,10 +1,10 @@
 body {
 background-color: #f0d6c8;
 }
-h1{
+.myName{
 	text-align:justify;
 	font: bold 30px/36px Courier;
-	margin: 0px 15px 0px 15px;
+	margin: 30px 15px 15px 15px;
 }
 .myPhoto{
 	margin: 7px;
@@ -32,11 +32,22 @@ ul{
 li{
 	list-style:circle;
 }
-.par3{
+.addr{
+    margin: 16px 0px 16px 0px;
+}
+.addr>p{
+    margin: 0;
+}
+.feed {
 	font-family:Arial, Helvetica, sans-serif;
 	text-align: justify;
+        margin-bottom: 35px;
+        margin-top: 16px;
 }
-div{
+.feed>p{
+    margin: 0;
+}
+.main{
 	width: 500px;
 	height: 100%;
 	background-color: #f7e3bc;
