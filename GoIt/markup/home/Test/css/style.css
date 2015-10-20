@@ -23,7 +23,7 @@ body{
 header{
     position: relative;
     top: 0px;
-    width: 100%;
+    width: 99.9%;
     text-align: center;
     background: rgb(255,255,255); /* Old browsers */
     background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(243,243,243,1) 50%, rgba(237,237,237,1) 51%, rgba(255,255,255,1) 100%); /* FF3.6+ */
