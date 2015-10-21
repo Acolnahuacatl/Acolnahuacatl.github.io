@@ -31,7 +31,11 @@ background-color: #f0d6c8;
 }
 .main, .myPhoto{
     border: #8c8c8c solid 2px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -khtml-border-radius: 15px;
     border-radius: 15px;
+     behavior: url(border-radius.htc);
 }
 .myPhoto{
     height: 250px;
