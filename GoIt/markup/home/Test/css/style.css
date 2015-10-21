@@ -35,9 +35,12 @@ header{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
 }
 h1{
-    font-family: noto sans;
     font-size: 27px;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.76);
+}
+h1, .leftBar>p,.leftButton>p, .leftButtonA>p, .nav>p, .window>p{
+    font-family: noto sans;
+    src: url(http://allfont.ru/allfont.css?fonts=noto-sans);
 }
 .main{
     height: 100%;
@@ -112,7 +115,6 @@ h1{
 }
 .leftBar>p{
     margin: 7px auto 10px 6px;
-    font-family: noto sans;
     font-size: 15px;
     color: #ACABAA;
 }
@@ -147,7 +149,6 @@ h1{
 }
 .leftButton>p, .leftButtonA>p{
     margin-left: 4px;
-    font-family: noto sans;
     font-size: 15px;
     
 }
@@ -158,7 +159,6 @@ h1{
 }
 .nav>p{
     margin-left: 10px;
-    font-family: noto sans;
     font-size: 15px;
 }
 .window{
@@ -177,7 +177,6 @@ h1{
 .window>p{
     margin: 15px;
     text-align: justify;
-    font-family: noto sans;
 }
 .footer{
     width: auto;
