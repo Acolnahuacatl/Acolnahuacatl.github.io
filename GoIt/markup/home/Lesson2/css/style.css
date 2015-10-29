@@ -1,10 +1,150 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 28.10.2015, 10:50:53
-    Author     : yaroslav
-*/
+@font-face{
+    font-family: Open Sans;
+    src: url(../fonts/open-sans.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Open Sans;
+    background: #f9f9f9;
+    
+}
+.main_wrapper{
+    margin: 0 auto;
+    width: 77.6%;
+    max-width: 1060px;
+    min-width: 600px;
+    min-height: 950px;
+    background: #ffffff;
+    -webkit-box-shadow: 0px 0px 19px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 19px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 19px -4px rgba(0,0,0,0.75);
+}
+.logo{
+    padding: 50px 0px 40px 0px;
+}
+.logo, .content_wrapper{
+    margin: 0 auto;
+    width: 93%;
+    min-width: 465px;
+    color: #343434;
+}
+.top_menu{
+    background: url(../img/link.jpg) repeat-x;
+}
+.top_menu, .bottom_menu{
+    margin: 0 auto;
+    width: 93%;
+    height: 40px;
+    max-width: 996px;
+    min-width: 465px;
+}
+.top_menu ul, .bottom_menu ul{
+    display: table-row;
+}
+.top_menu ul li, .bottom_menu ul li{
+    display: table-cell;
+    width: auto;
+    vertical-align: middle;
+    text-align: center;
+    text-align: left;
+    padding-right: 48px;
+}
+.top_menu ul li a, .bottom_menu ul li a{
+    height: 38px;
+    width: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+    font-size: 15px;
+    display: table-cell;
+    text-decoration: none;
+    vertical-align: middle;
+    border: transparent solid 1px;
+}
+.top_menu ul li a{
+    font-weight: bold;
+    text-shadow: 2px 2px 2px rgba(12, 12, 12, 1);
+    color: #ffffff;
+}
+.top_menu ul li a:hover{ 
+    background: url(../img/on_active.jpg) repeat-x;
+    border-left: #838383 solid 1px;
+    border-right: #838383 solid 1px;
+}
 
+.content_wrapper{
+    height: 100%;
+    min-height: 600px;
+    margin: 40px auto; 
+}
+.aside_menu_box, .item_wrapper_box{
+    float:left;
+}
+
+/* боковое меню*/
+
+.aside_menu_box{
+    width: 27%;
+    min-width: 100px;
+    
+}
+.aside_menu{
+    height: auto;
+    margin-right: 26px; 
+    list-style: none;
+    border: #c8c8c8 solid 1px;
+
+}
+.aside_menu li{
+    height: 40px;
+    vertical-align: middle;
+    border-bottom: #c8c8c8 solid 1px;
+}
+ul .car_parts{
+    border-bottom: none;
+}
+.aside_menu_box ul li a{
+    vertical-align: middle;
+    padding-left: 24px;
+
+    color: #656363;
+    text-decoration: none;
+}
+
+/*content box*/
+
+.item_wrapper_box{
+    width: 73%;
+  
+}
+.photo_item_wrapper{
+    margin-left: 24px;
+    width: auto;
+}
+.photo_item_wrapper img{
+    
+    width: 100%;
+    border: #c8c8c8 solid 1px;
+}
+.item_description{
+    height: auto;
+    width: auto;
+    
+}
+.item_description p{
+    margin: 40px;
+}
+footer{
+    margin: 0 auto;
+}
+.bottom_menu{
+    background: #e1e1e1;
+}
+.bottom_menu ul li a:hover{
+    text-decoration: underline;
+}
+.bottom_menu ul li a{
+    color: #2c2c2c;
+}
