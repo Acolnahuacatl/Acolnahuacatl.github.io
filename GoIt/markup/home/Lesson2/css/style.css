@@ -51,7 +51,6 @@ body{
     text-align: center;
     text-align: left;
     padding-right: 48px;
-    
 }
 .top_menu ul li a, .bottom_menu ul li a{
     height: 38px;
@@ -74,11 +73,77 @@ body{
     border-left: #838383 solid 1px;
     border-right: #838383 solid 1px;
 }
-.bottom_menu ul li a:hover{
-    text-decoration: underline;
+
+.content_wrapper{
+    height: 100%;
+    min-height: 600px;
+    margin: 40px auto; 
+}
+.aside_menu_box, .item_wrapper_box{
+    float:left;
+}
+
+/* боковое меню*/
+
+.aside_menu_box{
+    width: 27%;
+    min-width: 100px;
+    
+}
+.aside_menu{
+    height: auto;
+    margin-right: 26px; 
+    list-style: none;
+    border: #c8c8c8 solid 1px;
+
+}
+.aside_menu li{
+    height: 40px;
+    vertical-align: middle;
+    border-bottom: #c8c8c8 solid 1px;
+}
+ul .car_parts{
+    border-bottom: none;
+}
+.aside_menu_box ul li a{
+    vertical-align: middle;
+    padding-left: 24px;
+
+    color: #656363;
+    text-decoration: none;
+}
+
+/*content box*/
+
+.item_wrapper_box{
+    width: 73%;
+  
+}
+.photo_item_wrapper{
+    margin-left: 24px;
+    width: auto;
+}
+.photo_item_wrapper img{
+    
+    width: 100%;
+    border: #c8c8c8 solid 1px;
+}
+.item_description{
+    height: auto;
+    width: auto;
+    
+}
+.item_description p{
+    margin: 40px;
+}
+footer{
+    margin: 0 auto;
 }
 .bottom_menu{
-    background: #e1e1e1 repeat-x;
+    background: #e1e1e1;
+}
+.bottom_menu ul li a:hover{
+    text-decoration: underline;
 }
 .bottom_menu ul li a{
     color: #2c2c2c;
