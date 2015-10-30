@@ -184,6 +184,7 @@ ul.partners{
 .info_box, .news_box{
     width: 21%;
     height: 100%;
+    padding-top: 10px;
     font-size: 14px;
     text-align: center;
     background-color: #edeef0;
@@ -206,24 +207,3 @@ footer{
     margin-top: 5px;
     margin-bottom: 5px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
