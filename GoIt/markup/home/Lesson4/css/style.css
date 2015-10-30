@@ -184,12 +184,13 @@ ul.partners{
 .info_box, .news_box{
     width: 21%;
     height: 100%;
-    padding-top: 10px;
     font-size: 14px;
     text-align: center;
     background-color: #edeef0;
 }
-
+.info_box h3, .news_box h3{
+    line-height: 40px;
+}
 .main_content_box{
     width: 58%;
     height: 100%;
@@ -200,6 +201,7 @@ ul.partners{
     border-left: 1px solid #c7cacf;
     border-right: 1px solid #c7cacf;
 }
+/*CONTENT END*/
 footer{
     text-align: center;
     color: #fff;
