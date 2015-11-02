@@ -71,7 +71,7 @@ body{
 }
 .logo h1 a{
     color: #343434;
-    texte-decoration: none;
+    text-decoration: none;
 }
 .top_menu{
     background: url(../img/link.jpg) repeat-x;
