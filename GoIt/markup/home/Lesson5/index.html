@@ -15,7 +15,7 @@ and open the template in the editor.
     <body>
         <header class="clearfix">
             <ul class="login">
-                <li><a href="#"><img src="img/flag.png">Minhas Ofertas</a></li>
+                <li><a href="#"><img src="img/flag.png" alt="white flag">Minhas Ofertas</a></li>
                 <li>
                     <a href="#">
                         Ola! <span class="underline">Entrar</span> uo <span class="underline">Cadastre-se</span>
@@ -36,18 +36,18 @@ and open the template in the editor.
                 <h1>Cadastre-se</h1>
             </div>
             <div class="background_bottom clearfix">
-                <a href="#" class="facebook clearfix">
+                <button class="facebook clearfix">
                     <span class="facebook_left">f</span>
                     <span class="facebook_right">Login in <span class="thin">with</span> facebook</span>
-                </a>
+                </button>
                 <!-- FACEBOOK BUTTON END -->
-                <div class="separator clearfix">
-                    <div class="horizontalLine hr"></div>
+                <div class="separator ">
+                    <div class="horizontalLine hr_left"></div>
                     <span class="hr">OU</span>
-                    <div class="horizontalLine hr"></div>
+                    <div class="horizontalLine hr_right"></div>
                 </div>
                 <!-- SEPARATOR END -->
-                <form action="#" method="post">
+                <form action="#" method="post" class="registration_form">
                     <input type="text" placeholder="First Name" class="text_field" name="first_name" required>
                     <input type="text" placeholder="Last Name" class="text_field" name="last_name" required>
                     <input type="email" placeholder="Email Address" class="text_field" name="email" required>
@@ -57,8 +57,12 @@ and open the template in the editor.
                         <input type="checkbox" name="updates_and_tips">
                         Send me Youbike updates and tips
                     </label>
-                    <input type="submit" class="create_button" name="create" value="Create My Account"> 
+                    <button class="create_account" name="create">Create My Account</button>
                 </form>
+                <p class="privacy_description">
+                    By clicking the button above, you agree to the Terms of Service
+                    Xiew our Privacy Policy.
+                </p>
             </div>
         </div> <!-- Wrapper END -->
     </body>

@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'Helvetica Neuecyr Light';
+    src: url('../fonts/helveticalight-webfont.eot');
+    src: url('../fonts/helveticalight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helveticalight-webfont.woff2') format('woff2'),
+         url('../fonts/helveticalight-webfont.woff') format('woff'),
+         url('../fonts/helveticalight-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .clearfix:before,
 .clearfix:after {
   content:"";
@@ -11,6 +22,7 @@
 }
 body{
     min-height: 1027px;
+    font-family: 'Helvetica Neuecyr Light', Arial, Tahoma, sans-serif;
     background: url(../img/background.png) no-repeat;
     background-size: cover;
     -moz-background-size: cover;
@@ -41,8 +53,8 @@ header ul li a{
 /* right side */
 
 .login a{
-    color: #fff;
     line-height: 34px;
+    color: #fff;
     border: 1px solid transparent;
     border-radius: 2px;
     -moz-border-radius: 2px;
@@ -50,16 +62,12 @@ header ul li a{
     
 }
 .login img{
-    vertical-align: middle;
     margin-right: 10px;
+    vertical-align: middle;
 }
 .underline{
     text-decoration: underline; 
 }
-/*.login li:first-child a{
-    padding-left: 38px;
-    background: url(../img/flag.png) no-repeat 3px ;
-}*/
 .login li a:hover{
     background: rgba(81,176,220,1);
     background: -moz-linear-gradient(top, rgba(81,176,220,1) 0%, rgba(46,121,196,1) 100%);
@@ -74,7 +82,7 @@ header ul li a{
 .header_separator{
     width: 1px;
     height: 32px;
-    margin: 2px;
+    margin: 2px 10px;
     margin-left: 15px;
     background: #60b5ed;
 }
@@ -101,25 +109,28 @@ header ul li a{
     margin: -0px -280px;
 }
 .background_top, .background_bottom{
-    padding: 20px 140px;
+    padding: 20px 152px;
     background: rgba(0, 0, 0, 0.5);
     text-align: center;
 }
 .background_top{
     margin-bottom: 5px;
 }
+.background_top h1{
+    font-size: 24px;
+    color: #fff;
+}
 
 /* FACEBOOK BUTTON */
 
-.background_bottom .facebook{
-    display: block;
-    text-decoration: none;
+.facebook{
+    width: 275px;
     line-height: 35px;
     background: url(../img/facebook.jpg);
-    border-top: 1px solid #7889b7;
-    border-radius: 5px;
     color: #fff;
     font-weight: bold;
+    border-top: 1px solid #7889b7;
+    border-radius: 5px;
 }
 .facebook_left{
     float: left;
@@ -129,7 +140,7 @@ header ul li a{
 }
 .facebook_right{
     float: left;
-    width: 236px;
+    width: 220px;
     margin-right: 1px;
     text-align: center;
     border-left: 1px solid #4e67a9;
@@ -139,30 +150,71 @@ header ul li a{
 }
 /* SEPARATOR */
 .separator{
-    margin: 30px 0;
+    width: 277px;
+    margin: 30px auto;
 }
 .horizontalLine{
     margin: 5px;
-    width: 114px;
+    width: 40%;
     height: 1px;
     background: #666666;
     border-bottom: 1px solid #000;
 }
-.hr{
-    display: inline-table;
+.separator .hr{
     color: #999;
 }
-
+.hr_left{
+    float: left;
+}
+.hr_right{
+    float: right;
+}
 /* ACTOIN */
 
 .text_field{
     margin-bottom: 20px;
     width: 100%;
     height: 32px;
+    padding-left: 20px;
+    color: #fff;
     background: #101010;
-    
+    border-bottom: 1px solid #484847;
+}
+.text_field:focus{
+    outline: none;
+    color: #fff;
+    border-bottom: 1px solid #699bcd;
+    -webkit-box-shadow: 0px 0px 6px 1px rgba(85,142,183,1);
+    -moz-box-shadow: 0px 0px 6px 1px rgba(85,142,183,1);
+    box-shadow: 0px 0px 6px 1px rgba(85,142,183,1);
+    background: url(../img/text_field_active.jpg);
+}
+.registration_form label{
+    float: left;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 14px;
+}
+.registration_form button{
+    width: 160px;
+    height: 34px;
+    color: white;
+    background: url(../img/create_button.png);
+    border-radius: 4px;
 }
 
+.privacy_description{
+    padding: 20px 0;
+    color: #fff;
+    font-size: 11px;
+}
+button:focus{
+    outline: none;
+    -webkit-box-shadow: 0px 0px 8px 1px rgba(0,34,255,1);
+    -moz-box-shadow: 0px 0px 8px 1px rgba(0,34,255,1);
+    box-shadow: 0px 0px 8px 1px rgba(0,34,255,1);
+    transition: 0.3s;
+}
 /* 
     Created on : 05.11.2015, 14:17:38
     Author     : yaroslav
