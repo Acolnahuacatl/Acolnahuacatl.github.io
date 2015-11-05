@@ -21,7 +21,10 @@ header{
     padding: 0 20px;
     background: #074c89;
 }
-header ul, header .vertical_line{
+
+/* MENU */
+
+header ul, header .header_separator{
     float: right;
 }
 header ul li{
@@ -34,6 +37,9 @@ header ul li a{
     font-size: 14px;
     transition: all 0.4s linear;
 }
+
+/* right side */
+
 .login a{
     color: #fff;
     line-height: 34px;
@@ -65,13 +71,15 @@ header ul li a{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#51b0dc', endColorstr='#2e79c4', GradientType=0 );
     border: 1px solid #449ad3;
 }
-.vertical_line{
+.header_separator{
     width: 1px;
     height: 32px;
     margin: 2px;
     margin-left: 15px;
     background: #60b5ed;
 }
+
+/* left side */
 
 .menu a{
     line-height: 36px;
@@ -84,7 +92,7 @@ header ul li a{
 
 /* Menu END */
 
-.registration_wrapper {
+.registration_main_wrapper{
     position: absolute;
     top: 30%;
     left: 50%;
@@ -101,17 +109,60 @@ header ul li a{
     margin-bottom: 5px;
 }
 
+/* FACEBOOK BUTTON */
 
-
+.background_bottom .facebook{
+    display: block;
+    text-decoration: none;
+    line-height: 35px;
+    background: url(../img/facebook.jpg);
+    border-top: 1px solid #7889b7;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+.facebook_left{
+    float: left;
+    padding: 0 15px;
+    font-size: 21px;
+    border-right: 1px solid #213c71;
+}
+.facebook_right{
+    float: left;
+    width: 236px;
+    margin-right: 1px;
+    text-align: center;
+    border-left: 1px solid #4e67a9;
+}
+.thin{
+    font-weight: 100;
+}
+/* SEPARATOR */
+.separator{
+    margin: 30px 0;
+}
 .horizontalLine{
     margin: 5px;
-    width: 60px;
-    height: 2px;
-    background: red;
+    width: 114px;
+    height: 1px;
+    background: #666666;
+    border-bottom: 1px solid #000;
 }
-.br{
+.hr{
     display: inline-table;
+    color: #999;
 }
+
+/* ACTOIN */
+
+.text_field{
+    margin-bottom: 20px;
+    width: 100%;
+    height: 32px;
+    background: #101010;
+    
+}
+
 /* 
     Created on : 05.11.2015, 14:17:38
     Author     : yaroslav
