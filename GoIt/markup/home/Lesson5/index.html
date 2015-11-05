@@ -15,8 +15,12 @@ and open the template in the editor.
     <body>
         <header class="clearfix">
             <ul class="login">
-                <li><a href="#">Minhas Ofertas</a></li>
-                <li><a href="#">Ola! Entrar uo Cadastre-se</a></li>
+                <li><a href="#"><img src="img/flag.png">Minhas Ofertas</a></li>
+                <li>
+                    <a href="#">
+                        Ola! <span class="underline">Entrar</span> uo <span class="underline">Cadastre-se</span>
+                    </a>
+                </li>
             </ul>
             <div class="vertical_line"></div>
             <ul class="menu">
@@ -26,12 +30,12 @@ and open the template in the editor.
                 <li><a href="#">Contato</a></li>
                 <li><a href="#">Ajuda</a></li>
             </ul>
-        </header>
-        <div class="wrapper">
-            <div>
+        </header><!-- Header END -->
+        <div class="registration_wrapper">
+            <div class="background_top">
                 <h1>Cadastre-se</h1>
             </div>
-            <div>
+            <div class="background_bottom clearfix">
                 <ul>
                     <li>
                         <a href="#">
@@ -39,9 +43,9 @@ and open the template in the editor.
                         </a>
                     </li>
                 </ul>
-                <div class="horizontalLine"></div>
-                <span>OU</span>
-                <div class="horizontalLine"></div>
+                <div class="horizontalLine br"></div>
+                <span class="br">OU</span>
+                <div class="horizontalLine br"></div>
                 <form action="#" method="post">
                     <input type="text" placeholder="First Name" class="text_field" name="first_name" required>
                     <input type="text" placeholder="Last Name" class="text_field" name="last_name" required>
@@ -55,6 +59,6 @@ and open the template in the editor.
                     <input type="submit" class="create_button" name="create" value="Create My Account"> 
                 </form>
             </div>
-        </div>
+        </div> <!-- Wrapper END -->
     </body>
 </html>
