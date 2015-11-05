@@ -1,0 +1,42 @@
+.clearfix:before,
+.clearfix:after {
+  content:"";
+  display:table;
+}
+.clearfix:after {
+  clear:both;
+}
+.clearfix {
+  zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+body{
+    background: url(../) no-repeat;
+}
+header{
+    padding: 0 20px;
+    background: #074c89;
+}
+header ul, header .vertical_line{
+    float: right;
+}
+header ul li{
+    display: inline-block;
+}
+header ul li a{
+    display: block;
+    line-height: 35px;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+.menu a{
+    color: #60b5ed;
+}
+.login a{
+    color: #fff;
+}
+/* 
+    Created on : 05.11.2015, 14:17:38
+    Author     : yaroslav
+*/
+
