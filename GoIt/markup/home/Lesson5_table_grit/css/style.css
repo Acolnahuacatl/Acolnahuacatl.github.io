@@ -23,7 +23,6 @@
         width: 16.66%; 
         /*-- our gutter --*/
         border: 5px solid black;
-        background: red;
 }
 [class*='vertical-col-'] {
         min-height: 1px; 
@@ -70,5 +69,5 @@
     height: 150px;
 }
 .row-3 .horizontal-col-1{
-    height: 309px;
+    height: 310px;
 }
