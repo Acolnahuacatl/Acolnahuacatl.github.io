@@ -51,7 +51,7 @@ input, button, textArea{
     border: none;
 }
 input:active, button:active, textArea:active{
-    outline: navy;
+    outline: none;
 }
 input:focus, button:focus, textArea:focus{
     outline: none;
