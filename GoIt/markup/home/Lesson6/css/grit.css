@@ -1,0 +1,18 @@
+
+.container{
+				margin: 0 auto;
+}
+
+[class*='row']:before,
+[class*='row']:after{
+				margin: 0 auto;
+    content: "";
+    display: table;
+    clear: both;
+}
+
+[class*='col'] {
+        float: left;
+        min-height: 1px;
+        min-width: 1px;
+}
