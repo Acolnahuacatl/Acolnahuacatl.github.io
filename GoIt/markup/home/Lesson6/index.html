@@ -59,7 +59,7 @@ and open the template in the editor.
         </header>
 								<!--HEADER END-->
 								<div class="search_container row">
-												<div class="col search by_auto">
+												<div class="col search search-by-auto">
 																<h3>Поиск по автомобилю</h3>
 																<form method="post" action="#" name="serch by auto">
 																				<div class="wheel">
@@ -152,13 +152,120 @@ and open the template in the editor.
 																				</div>
 																</form>
 												</div>
-												<div class="col search"><p>col-1</p></div>
-												<div class="col search"><p>col-1</p></div>
+												<div class="col search search-by-tire">
+																<h3>поиск шин</h3>
+																<form action="#" method="post">
+																				<div class="select-row">
+																								<p>Размер:</p>
+																								<select name="шырина" class="small_select">
+																												<option value="135">135</option>
+																												<option value="155">155</option>
+																												<option value="165">165</option>
+																												<option value="175">175</option>
+																												<option value="185">185</option>
+																								</select>
+																								<p class="slash">/</p>
+																								<select name="профиль" class="small_select">
+																												<option value="21">21</option>
+																												<option value="25">25</option>
+																												<option value="30">30</option>
+																												<option value="35">35</option>
+																												<option value="40">40</option>
+																								</select>
+																				</div>
+																				<div class="select-row radius">
+																								<p>R</p>
+																								<select name="rad" class="smaller_select">
+																												<option value="13">13</option>
+																												<option value="14">14</option>
+																												<option value="15">15</option>
+																												<option value="16">16</option>
+																												<option value="17">17</option>
+																								</select>
+																				</div>
+																				<div class="select-row season checkbox-decor">
+																								<p>Сезон:</p>
+																								<input id="checkbox1" type="checkbox" name="summer">
+																								<label for="checkbox1">
+																												 лето
+																								</label>
+																								<input id="checkbox2" type="checkbox" name="winter">
+																								<label for="checkbox2">
+																												 зима
+																								</label>
+																								<input id="checkbox3" type="checkbox" name="all-season">
+																								<label for="checkbox3">
+																												 всесез
+																								</label>
+																				</div>
+																				<input type="submit" name="begin serch" value="ПОИСК" class="serch-button">
+																</form>
+												</div>
+												<div class="col search search-by-wheel">
+																<h3>поиск дисков</h3>
+																<form action="#" method="post">
+																				<div class="left-side-by-wheel">
+																								<div class="select-row">
+																												<p>Диаметр <span class="gray_text">диска:</span></p>
+																												<select name="шырина" class="medium_select">
+																																<option value="14">14</option>
+																																<option value="15">15</option>
+																																<option value="16">16</option>
+																																<option value="17">17</option>
+																																<option value="18">18</option>
+																												</select>
+																								</div>
+																								<div class="select-row">
+																												<p>Количество <span class="gray_text">крепёжных отверстий:</span></p>
+																												<select name="шырина" class="small_select">
+																																<option value="3">3</option>
+																																<option value="4">4</option>
+																																<option value="5">5</option>
+																																<option value="6">6</option>
+																																<option value="7">7</option>
+																												</select>
+																								</div>
+																								<div class="select-row">
+																												<p>Диаметр <span class="gray_text">расположения крепёжных отверстий:</span></p>
+																												<select name="шырина" class="medium_select">
+																																<option value="12">12</option>
+																																<option value="13">13</option>
+																																<option value="14">14</option>
+																																<option value="15">15</option>
+																																<option value="16">16</option>
+																												</select>
+																								</div>
+																				</div>	
+																				<div class="right-side-by-wheel">
+																								<div class="select-column">
+																												<p>ДЦО <span class="gray_text">(диаметр центрального отверстия):</span></p>
+																												<select name="шырина" class="medium_select">
+																																<option value="12">12</option>
+																																<option value="13">13</option>
+																																<option value="14">14</option>
+																																<option value="15">15</option>
+																																<option value="16">16</option>
+																												</select>
+																								</div>
+																								<div class="select-column">
+																												<p>ЕТ <span class="gray_text">(вылет диска):</span></p>
+																												<select name="шырина" class="medium_select">
+																																<option value="12">12</option>
+																																<option value="13">13</option>
+																																<option value="14">14</option>
+																																<option value="15">15</option>
+																																<option value="16">16</option>
+																												</select>
+																								</div>
+																				</div>	
+																				<input type="submit" name="begin serch" value="ПОИСК" class="serch-button">
+																</form>
+												</div>
 								</div>
-								<div class="container row">
-												<div class="col"><p>col-1</p></div>
-												<div class="col"><p>col-1</p></div>
-												<div class="col"><p>col-1</p></div>
+								<div class="container row content">
+												<aside class="col aside-aside"><p>col-1</p></aside>
+												<div class="col product"><p>col-1</p></div>
+												<aside class="col aside-right"><p>col-1</p></aside>
 								</div>
 								<ul class="container row company_list">
 												<li class="col company"><img src="" alt="dunlop"></li>

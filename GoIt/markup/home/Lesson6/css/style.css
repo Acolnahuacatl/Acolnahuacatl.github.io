@@ -53,10 +53,12 @@ body{
 /*AUTORIZATION FORM*/
 
 .autorization{
+				display: table;
+				//vertical-align: middle;
 				height: 27px;
 				margin-left: 12px;
 				width: 495px;
-				padding: 3px;
+				padding: 3px 5px;
 				background: rgba(31,104,135,1);
 				background: -moz-linear-gradient(top, rgba(31,104,135,1) 0%, rgba(12,51,87,1) 100%);
 				background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(31,104,135,1)), color-stop(100%, rgba(12,51,87,1)));
@@ -74,20 +76,25 @@ body{
 				box-shadow: 3px 3px 12px 0px rgba(137,139,140,1);
 }
 .autorization *{
-				display:block;
-				float: left;
-				margin-left: 2px;
+				display: inline;
+				
+				vertical-align: middle;
+/*				display:block;
+				float: left;*/
+				//margin-left: 2px;
 				font-size: 11px
 }
 .login{
 				color: #97a2a6;
 }
 .login .submit{
-				width: 33px;
-				height: 100%;
-				line-height: 10.4pt;
-				margin-top: 1px;
-				margin-left: 1px;
+				//width: 30px;
+				//height: 100%;
+				//line-height: 1pt;
+				//margin-top: 1px;
+				//margin-left: 1px;
+				padding: 0;
+				padding-bottom: 2px;
 				color: #fff;
 				background: none;
 }
@@ -98,27 +105,29 @@ body{
 				width: 114px;
 				height: 18px;
 				margin-right: 3px;
-				padding: 3px;
+				//padding: 3px;
 				border: 1px solid #82949c;
 				border-radius: 2px;
 }
 .register,
 .forgot_pass{
 				line-height: 13pt;
-				margin: 0 5px;
+				//margin: 0 5px;
 }
 .register{
 				color: #fff;
 				text-decoration: none;
 }
 .login-separator{
+				display: inline-block;
 				width: 1px;
 				height: 10px;
-				margin: 4px 3px;
+				margin: 4px 2px;
 				background: #d3dadf;
 }
 .forgot_pass{
-				margin-left: 13px;
+				float: right;
+				//margin-left: 13px;
 				color: #97a2a6;
 				letter-spacing: 0.3pt;
 }
@@ -225,11 +234,13 @@ menu{
 .search_container{
 				margin: 9px auto;
 				width: 914px;
+				height: 143px;
 }
 .search{
 				border: 1px solid #adadae;
 				margin: 0 7px;
 				height: 135px;
+				position: relative;
 				border-radius: 15px;
 				-moz-border-radius: 15px;
 				-webkit-border-radius: 15px;
@@ -237,27 +248,26 @@ menu{
 				-moz-box-shadow: 5px 4px 5px 0px rgba(173,173,174,1);
 				box-shadow: 5px 4px 5px 0px rgba(173,173,174,1);
 }
-.by_auto{
-				position: relative;
+.search-by-auto{
 				width: 415px;
 }
 .search h3, .search h4{
 				font-weight: bold;
 				color: #154468;
 }
-.by_auto h3{
+.search h3{
 				position: absolute;
 				left: 127px;
 				top: 3px;
 				font-size: 12px;
 				letter-spacing: 0.9pt;
 }
-.by_auto h4{
+.search h4{
 				margin-bottom: 5px;
 				font-size: 9px;
 				letter-spacing: 1.9pt;
 }
-.by_auto .right-align-h4{
+.search-by-auto .right-align-h4{
 				float: right;
 }
 .wheel, .tire{
@@ -289,17 +299,18 @@ menu{
 				-moz-appearance: none;
 				background: url(../img/strelka.png) no-repeat right;
 }
+/*SELECT DECOR END*/
 
-.by_auto select{
-				width: 95px;
+.search-by-auto select{
+				width: 105px;
 }
-.by_auto .select-year{
-				width: 50px;
+.search-by-auto .select-year{
+				width: 62px;
 }
 .search select:focus{
 				outline: none;
 }
-.wheel p, .tire p{
+.search p{
 				display: table-cell;
 				vertical-align: middle;
 				font-size: 9px;
@@ -318,8 +329,157 @@ menu{
 				font-style: italic;
 				text-decoration: underline;
 }
+/*SEARCH BUTTON DERCOR END*/
+
+.search-by-tire{
+				width: 190px;
+				padding: 22px 14px 0px;
+}
+.search-by-tire h3, .search-by-wheel h3{
+				left: 10px;
+}
+.search-by-tire p{
+				padding: 2px 3px 0 0
+}
+.small_select{
+				margin: 0px;
+				width: 55px;
+}
+.medium_select{
+				margin: 0;
+				width: 60px;
+}
+.search-by-tire .slash{
+				padding: 0 5px;
+}
+.smaller_select{
+				margin-bottom: 5px;
+				width: 46px;
+}
+.radius p{
+				padding: 0 6px 0 0;
+				text-align: right;
+}
 
 
+.season{
+				display: inline-block;
+				padding-top: 4px;
+				height: 41px;
+				width: 120px;
+}
+.search-by-tire .season p{
+				vertical-align: top;
+				display: block;
+				float: left;
+				width: 45px;
+				height: 100%
+			
+}
+
+.search-by-tire label{
+				display: table-cell;
+				float: left;
+    position: relative;
+				padding: 0 15px;
+				height: 14px;
+				width: 60px;
+				font-size: 9px;
+				line-height: 14px;
+				font-size: 10px;
+    cursor: pointer;
+}
+
+/*CHECKBOX DECOR*/
+
+.checkbox-decor input[type=checkbox] {
+    display: none;
+}
+.checkbox-decor label:before {
+    content: "";
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    background-color: #FFf;
+    border-radius: 2px;
+    -webkit-box-shadow: inset 2px 2px 3px 0px rgba(0,0,0,0.75);
+				-moz-box-shadow: inset 2px 2px 3px 0px rgba(0,0,0,0.75);
+				box-shadow: inset 2px 2px 3px 0px rgba(0,0,0,0.75);
+}
+.checkbox-decor input[type=checkbox]:checked + label:before {
+    content: "";
+				background: url(../img/galochka.png) no-repeat 2px ;
+    //text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    //font-size: 15px;
+    //color: #f3f3f3;
+    //text-align: center;
+    //line-height: 15px;
+}
+/*CHECKBOX DECOR END*/
+
+/*SEARCH BY WHEEL*/
+
+.search-by-wheel{
+				padding: 4px 14px;
+				width: 266px;
+}
+.left-side-by-wheel{
+				float: left;
+				width: 160px;
+				padding: 20px 0;
+}
+.left-side-by-wheel p{
+				display: inline-block;
+				width: 90px;
+}
+.left-side-by-wheel select{
+				margin: 0 2px
+}
+.right-side-by-wheel{
+				float: right;
+				width: 75px;
+				height: 105px;
+				padding-left: 8px;
+				border-left: 1px solid black;
+}
+.right-side-by-wheel select{
+		margin: 0;
+}
+.right-side-by-wheel p{
+				padding: 5px 0 0;
+}
+.right-side-by-wheel .gray_text{
+				display: block;
+				padding: 0;
+				margin: 0;
+}
+/*SEARCH BY WHEEL END*/
+
+.content{
+				margin-bottom: 1006px;
+				width: 910px;
+}
+[class*=aside-]{
+				width: 182px;
+}
+.product{
+				width: 526px;
+				margin: 0 10px;
+				border-radius: 4px;
+				-moz-border-radius: 4px;
+				-webkit-border-radius: 4px;
+				background: rgba(229,231,232,1);
+				background: -moz-linear-gradient(top, rgba(229,231,232,1) 0%, rgba(147,167,176,1) 100%);
+				background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(229,231,232,1)), color-stop(100%, rgba(147,167,176,1)));
+				background: -webkit-linear-gradient(top, rgba(229,231,232,1) 0%, rgba(147,167,176,1) 100%);
+				background: -o-linear-gradient(top, rgba(229,231,232,1) 0%, rgba(147,167,176,1) 100%);
+				background: -ms-linear-gradient(top, rgba(229,231,232,1) 0%, rgba(147,167,176,1) 100%);
+				background: linear-gradient(to bottom, rgba(229,231,232,1) 0%, rgba(147,167,176,1) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e7e8', endColorstr='#93a7b0', GradientType=0 );
+}
 /* 
     Created on : 08.11.2015, 14:07:46
     Author     : yaroslav
