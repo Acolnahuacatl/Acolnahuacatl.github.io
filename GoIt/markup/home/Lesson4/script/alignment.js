@@ -1,6 +1,6 @@
  window.onload = function() {
   setTimeout(function() {
-      var mainDivs = document.getElementsByClassName("block");
+      var mainDivs = document.getElementsByClassName("aligment");
       var maxHeight = 0;
       for (var i = 0; i < mainDivs.length; ++i) {
         if (maxHeight < mainDivs[i].clientHeight) {
