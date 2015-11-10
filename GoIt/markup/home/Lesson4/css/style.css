@@ -86,10 +86,6 @@ header{
 .choose_country a{
     color: #5fa5bb;
 }
-.header_bottom{
-    width: 100%;
-    height: 414px;
-}
 .header_bottom img{
     width: 100%;
     border-bottom: 1px solid #128aa7;
