@@ -546,6 +546,7 @@ menu{
 }
 .prpduct-photo-wrapper{
     margin: 0 auto;
+    padding: 5px;
     width: 140px;
     height: 130px;
     margin-bottom: 4px;
