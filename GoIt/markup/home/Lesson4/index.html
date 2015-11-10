@@ -10,10 +10,11 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
+								<script src="script/alignment.js"></script>
     </head>
     <body>
         <div class="main_wrapper">
-            <header>
+            <header class="clearfix">
                 <div class="header_top">
                         <div class="logo">
                             <a href="#"><img src="img/logo.png" alt="" /></a>
@@ -26,31 +27,32 @@ and open the template in the editor.
                             <p><a href="mailto:info@asia-holidays.com">info@asia-holidays.com</a></p>
                         </div>
                         <div class="choose_country">
-                            <div class="country">
-                                <a href=""><img src="img/m_flag.png" alt="Maldives">Мальдивы</a>
-                            </div>
-                            <div class="country">
-                                <a href=""><img src="img/s_flag.png" alt="Sri Lanka">Шри-Ланка</a>
-                            </div>
-                            <div class="country">
-                                <a href=""><img src="img/b_flag.png" alt="Bhutan">Бутан</a>
-                            </div>
-                            <div class="country">
-                                <a href=""><img src="img/t_flag.png" alt="Tibet">Тибет</a>
-                            </div>
-                            <div class="country">
-                                <a href=""><img src="img/n_flag.png" alt="Nepal">Непал</a>
-                            </div>
-                            <div class="country">
-                                <a href=""><img src="img/i_flag.png" alt="india">Индия</a>
-                            </div>
-                        </div>
+																												<ul>
+																																<li>
+																																				<a href=""><img src="img/m_flag.png" alt="Maldives">Мальдивы</a>
+																																</li>
+																																<li>
+																																				<a href=""><img src="img/s_flag.png" alt="Sri Lanka">Шри-Ланка</a>
+																																</li>
+																																<li>
+																																				<a href=""><img src="img/b_flag.png" alt="Bhutan">Бутан</a>
+																																</li>
+																																<li>
+																																				<a href=""><img src="img/t_flag.png" alt="Tibet">Тибет</a>
+																																</li>
+																																<li>
+																																				<a href=""><img src="img/n_flag.png" alt="Nepal">Непал</a>
+																																</li>
+																																<li>
+																																				<a href=""><img src="img/i_flag.png" alt="india">Индия</a>
+																																</li>
+																												</ul>
                     </div>
                 </div>
                 <div class="header_bottom">
                     <img src="img/beach.jpg" alt="beach" />
                 </div> <!-- HEADER DECOR END -->
-                <div class="menu">
+                <menu class="menu">
                     <ul class="nav">
                         <li class="first">
                             <a href="#">Главная</a>
@@ -95,10 +97,10 @@ and open the template in the editor.
                             <a href="#">О нас</a>
                         </li>
                     </ul>
-                </div> <!-- MENU END -->
+                </menu> <!-- MENU END -->
             </header> <!-- HEADER END -->
-            <div class="content_wrapper">
-                <div class="info_box">
+            <div class="content_wrapper clearfix" onload="function()">
+                <aside class="block info_box">
                     <h3>Информация</h3>
                     <p>
                         Lorem ipsum dolor sit amet
@@ -110,13 +112,11 @@ and open the template in the editor.
                         Lorem ipsum dolor sit amet
                         Lorem ipsum dolor sit amet
                     </p>
+                </aside>
+                <div class="block main_content_box clearfix">
+                    
                 </div>
-                <div class="main_content_box">
-                    <div class="content_box">
-                        
-                    </div>
-                </div>
-                <div class="news_box">
+                <section class="block left-float news_box">
                     <h3>Новости</h3>
                     <p>
                         Lorem ipsum dolor sit amet
@@ -143,7 +143,7 @@ and open the template in the editor.
                         Lorem ipsum dolor sit amet
                         Lorem ipsum dolor sit amet
                         Lorem ipsum dolor sit amet
-                </div>
+                </section>
             </div>
         </div> <!-- MAIN WRAPPER END -->
         <footer>
