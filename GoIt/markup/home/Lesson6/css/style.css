@@ -5,9 +5,9 @@
 	font-weight: normal;
 	src: url('../fonts/lucida_sans_unicode_regular-webfont.eot');
 	src: url('../fonts/lucida_sans_unicode_regular-webfont.eot?#iefix') format('embedded-opentype'),
- url('../fonts/lucida_sans_unicode_regular-webfont.woff2') format('woff2'),
- url('../fonts/lucida_sans_unicode_regular-webfont.woff') format('woff'),
- url('../fonts/lucida_sans_unicode_regular-webfont.ttf') format('truetype');
+	url('../fonts/lucida_sans_unicode_regular-webfont.woff2') format('woff2'),
+	url('../fonts/lucida_sans_unicode_regular-webfont.woff') format('woff'),
+	url('../fonts/lucida_sans_unicode_regular-webfont.ttf') format('truetype');
 }
 .clearfix:before,
 .clearfix:after
