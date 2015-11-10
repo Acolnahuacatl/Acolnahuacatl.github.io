@@ -35,13 +35,17 @@ header, .header_top, .header_bottom, .menu, .content_wrapper, footer{
     margin: 0 auto;
 }
 /*THE COMMON END*/
+.header_bottom{
+    height: 239px;
+}
+
 header{
     height: 442px;
     width: 100%;
     border-bottom: 1px solid black;
 }
 .header_top{
-    //height: 175px;
+    height: 175px;
 }
 
 .logo{
@@ -72,7 +76,7 @@ header{
     clear: both;
 }
 .choose_country li{
-				list-style: none;
+    list-style: none;
     width: 60px;
     margin-top: 30px;
     float: right;
@@ -103,7 +107,7 @@ header{
     -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
-				z-index: 1;
+    z-index: 1;
 }
 ul.nav{
     margin: 0;
