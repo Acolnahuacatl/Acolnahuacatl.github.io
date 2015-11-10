@@ -54,7 +54,6 @@ body{
 
 .autorization{
 				display: table;
-				//vertical-align: middle;
 				height: 27px;
 				margin-left: 12px;
 				width: 495px;
@@ -77,22 +76,13 @@ body{
 }
 .autorization *{
 				display: inline;
-				
 				vertical-align: middle;
-/*				display:block;
-				float: left;*/
-				//margin-left: 2px;
 				font-size: 11px
 }
 .login{
 				color: #97a2a6;
 }
 .login .submit{
-				//width: 30px;
-				//height: 100%;
-				//line-height: 1pt;
-				//margin-top: 1px;
-				//margin-left: 1px;
 				padding: 0;
 				padding-bottom: 2px;
 				color: #fff;
@@ -105,14 +95,12 @@ body{
 				width: 114px;
 				height: 18px;
 				margin-right: 3px;
-				//padding: 3px;
 				border: 1px solid #82949c;
 				border-radius: 2px;
 }
 .register,
 .forgot_pass{
 				line-height: 13pt;
-				//margin: 0 5px;
 }
 .register{
 				color: #fff;
@@ -127,7 +115,6 @@ body{
 }
 .forgot_pass{
 				float: right;
-				//margin-left: 13px;
 				color: #97a2a6;
 				letter-spacing: 0.3pt;
 }
@@ -361,7 +348,6 @@ menu{
 				text-align: right;
 }
 
-
 .season{
 				display: inline-block;
 				padding-top: 4px;
@@ -374,7 +360,6 @@ menu{
 				float: left;
 				width: 45px;
 				height: 100%
-			
 }
 
 .search-by-tire label{
@@ -412,11 +397,6 @@ menu{
 .checkbox-decor input[type=checkbox]:checked + label:before {
     content: "";
 				background: url(../img/galochka.png) no-repeat 2px ;
-    //text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
-    //font-size: 15px;
-    //color: #f3f3f3;
-    //text-align: center;
-    //line-height: 15px;
 }
 /*CHECKBOX DECOR END*/
 
@@ -459,7 +439,6 @@ menu{
 /*SEARCH BY WHEEL END*/
 
 .content{
-				//margin-bottom: 1006px;
 				width: 910px;
 }
 [class*=aside-column]{
@@ -496,18 +475,12 @@ menu{
     margin-top: 15px;
 
 }
-[class*=aside-list-]{
-    //height: 10px;
-}
-
 [class*=aside-list-] p{
     width: 155px;
-    //height: 28px;
     margin: 3px 0 0px;
     padding: 6px 29px;
     background: url(../img/marker.png) no-repeat 2px 40%;
 }
-
 .aside-submenu-list li{
     position: relative;
     width: 155px;
@@ -516,9 +489,7 @@ menu{
     font-weight: bold;
     font-size: 12px;
     color: #114165;
-    //height: 22px;
     margin: 2px 37px 0;
-    
 }
 .aside-submenu-list li a{
     font-weight: normal;
@@ -560,7 +531,6 @@ menu{
 .product figure{
     width: 33.33%;
     height: 202px;
-    
     text-align: center;
 }
 .description{
@@ -608,25 +578,16 @@ menu{
     margin: 0 10px;
 }
 .aside-submenu-list label{
-  //  display: inline-block;
     cursor: pointer;
     padding: 0px 20px;
     line-height: 26px;
 }
 .aside-submenu-list label:before{
-   // content: "";
-  //  display: inline-block;
     width: 10px;
     height: 10px;
     position: absolute;
-    //left: 0;
     bottom: 6px;
     border: 1px solid #345b79;
-   // background-color: #FFf;
-   // border-radius: 2px;
-   // -webkit-box-shadow: inset 2px 2px 3px 0px rgba(0,0,0,0.75);
-			//	-moz-box-shadow: inset 2px 2px 3px 0px rgba(0,0,0,0.75);
-			//	box-shadow: inset 2px 2px 3px 0px rgba(0,0,0,0.75);
 }
 .choose-button{
     margin: 10px 22px;
