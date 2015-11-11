@@ -71,11 +71,11 @@ body
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f6887', endColorstr='#0c3357', GradientType=0 );
 	height: 27px;
 	margin-left: 12px;
-	moz-border-radius: 3px;
-	moz-box-shadow: 3px 3px 12px 0px rgba(137,139,140,1);
+	-moz-border-radius: 3px;
+	-moz-box-shadow: 3px 3px 12px 0px rgba(137,139,140,1);
 	padding: 3px 5px;
-	webkit-border-radius: 3px;
-	webkit-box-shadow: 3px 3px 12px 0px rgba(137,139,140,1);
+	-webkit-border-radius: 3px;
+	-webkit-box-shadow: 3px 3px 12px 0px rgba(137,139,140,1);
 	width: 495px;
 }
 .autorization *
@@ -164,11 +164,11 @@ menu
 	box-shadow: 2px 2px 11px 0px rgba(80,82,94,1);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c345a', endColorstr='#010101', GradientType=0 );
 	height: 34px;
-	moz-border-radius: 4px;
-	moz-box-shadow: 2px 2px 11px 0px rgba(80,82,94,1);
+	-moz-border-radius: 4px;
+	-moz-box-shadow: 2px 2px 11px 0px rgba(80,82,94,1);
 	padding: 3px 1px 3px 124px;
-	webkit-border-radius: 4px;
-	webkit-box-shadow: 2px 2px 11px 0px rgba(80,82,94,1);
+	-webkit-border-radius: 4px;
+	-webkit-box-shadow: 2px 2px 11px 0px rgba(80,82,94,1);
 }
 .menu, .menu ul *, .cashbox
 {
@@ -181,10 +181,10 @@ menu
 	color: #8a9296;
 	font-size: 12px;
 	font-weight: bold;
-	moz-border-radius: 15px;
+	-moz-border-radius: 15px;
 	padding: 7px 20px;
 	text-decoration: none;
-	webkit-border-radius: 15px;
+	-webkit-border-radius: 15px;
 }
 @-moz-document url-prefix()
 {
@@ -243,11 +243,11 @@ menu
 	box-shadow: 5px 4px 5px 0px rgba(173,173,174,1);
 	height: 135px;
 	margin: 0 7px;
-	moz-border-radius: 15px;
-	moz-box-shadow: 5px 4px 5px 0px rgba(173,173,174,1);
+	-moz-border-radius: 15px;
+	-moz-box-shadow: 5px 4px 5px 0px rgba(173,173,174,1);
 	position: relative;
-	webkit-border-radius: 15px;
-	webkit-box-shadow: 5px 4px 5px 0px rgba(173,173,174,1);
+	-webkit-border-radius: 15px;
+	-webkit-box-shadow: 5px 4px 5px 0px rgba(173,173,174,1);
 }
 .search-by-auto
 {
@@ -298,12 +298,12 @@ menu
 	font-size: 10px;
 	height: 17px;
 	margin: 2px 0px;
-	moz-appearance: none;
-	moz-box-shadow: inset 2px 2px 3px 0px rgba(0,0,0,0.75);
+	-moz-appearance: none;
+	-moz-box-shadow: inset 2px 2px 3px 0px rgba(0,0,0,0.75);
 	overflow: hidden;
 	padding-right: 17px;
-	webkit-appearance: none;
-	webkit-box-shadow: inset 2px 2px 3px 0px rgba(0,0,0,0.75);
+	-webkit-appearance: none;
+	-webkit-box-shadow: inset 2px 2px 3px 0px rgba(0,0,0,0.75);
 }
 .search-by-auto select
 {
@@ -415,9 +415,9 @@ menu
 	display: inline-block;
 	height: 13px;
 	left: 0;
-	moz-box-shadow: inset 2px 2px 3px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: inset 2px 2px 3px 0px rgba(0,0,0,0.75);
 	position: absolute;
-	webkit-box-shadow: inset 2px 2px 3px 0px rgba(0,0,0,0.75);
+	-webkit-box-shadow: inset 2px 2px 3px 0px rgba(0,0,0,0.75);
 	width: 13px;
 }
 .checkbox-decor input[type=checkbox]:checked + label:before
@@ -485,12 +485,12 @@ menu
 	box-shadow: 2px 2px 5px 0px rgba(140,150,154,1);
 	height: 26px;
 	margin-bottom: 6px;
-	moz-border-radius: 15px;
-	moz-box-shadow: 2px 2px 5px 0px rgba(140,150,154,1);
+	-moz-border-radius: 15px;
+	-moz-box-shadow: 2px 2px 5px 0px rgba(140,150,154,1);
 	padding: 3px 0;
 	transition: 0.3s;
-	webkit-border-radius: 15px;
-	webkit-box-shadow: 2px 2px 5px 0px rgba(140,150,154,1);
+	-webkit-border-radius: 15px;
+	-webkit-box-shadow: 2px 2px 5px 0px rgba(140,150,154,1);
 }
 .aside-header-left p
 {
@@ -562,9 +562,9 @@ menu
 	border-radius: 4px;
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e7e8', endColorstr='#93a7b0', GradientType=0 );
 	margin: 0 10px;
-	moz-border-radius: 4px;
+	-moz-border-radius: 4px;
 	padding: 16px 15px 16px 9px;
-	webkit-border-radius: 4px;
+	-webkit-border-radius: 4px;
 	width: 526px;
 }
 .product figure
@@ -594,9 +594,9 @@ menu
 	height: 130px;
 	margin: 0 auto;
 	margin-bottom: 4px;
-	moz-border-radius: 7px;
+	-moz-border-radius: 7px;
 	padding: 5px;
-	webkit-border-radius: 7px;
+	-webkit-border-radius: 7px;
 	width: 140px;
 }
 .price
@@ -654,8 +654,8 @@ menu
 .choose-button:hover
 {
 	box-shadow: 0px 0px 17px 1px rgba(17,65,101,1);
-	moz-box-shadow: 0px 0px 17px 1px rgba(17,65,101,1);
-	webkit-box-shadow: 0px 0px 17px 1px rgba(17,65,101,1);
+	-moz-box-shadow: 0px 0px 17px 1px rgba(17,65,101,1);
+	-webkit-box-shadow: 0px 0px 17px 1px rgba(17,65,101,1);
 }
 .company_list
 {
