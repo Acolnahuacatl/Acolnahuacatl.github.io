@@ -129,6 +129,7 @@ ul.nav{
 .nav a:link, .nav a:hover, .nav a:visited{
     display: block;
     background: #303030;
+    white-space: nowrap;
     padding: 5px 10px;
     font-size: 14px;
     font-weight: bold;
@@ -181,7 +182,9 @@ ul.partners{
 }
 /*NAVIGATION MENU END*/
 .content_wrapper{
-    width: 100%;
+    padding: 10px 0;
+    background: url(../img/background_gray_right.jpg) repeat-y top right, 
+        url(../img/background_gray.jpg) repeat-y top left ;
 }
 .info_box{
     float: left;
@@ -198,7 +201,7 @@ ul.partners{
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding-bottom: 15px;
-    background-color: #edeef0;
+    //background-color: #edeef0;
 }
 .info_box h3, .news_box h3{
     line-height: 40px;
@@ -209,8 +212,9 @@ ul.partners{
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 58%;
-    border-left: 1px solid #c7cacf;
-    border-right: 1px solid #c7cacf;
+    text-align: center;
+    //border-left: 1px solid #c7cacf;
+    //border-right: 1px solid #c7cacf;
 }
 /*CONTENT END*/
 footer{
