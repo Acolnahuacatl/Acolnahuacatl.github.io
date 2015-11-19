@@ -48,6 +48,9 @@ header ul li a{
     text-decoration: none;
     font-size: 14px;
     transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
 }
 
 /* right side */
@@ -108,15 +111,26 @@ header ul li a{
     width: 560px;
     margin: -0px -280px;
 }
+.background_top{
+    position: absolute;
+    left: 50%;
+    top:21%;
+    margin: -0px -280px;
+    padding: 30px 0;
+    width: 560px;
+}
 .background_top, .background_bottom{
-    padding: 20px 152px;
     background: rgba(0, 0, 0, 0.5);
     text-align: center;
+}
+.background_bottom{
+    padding: 20px 152px;
+    
 }
 .background_top{
     margin-bottom: 5px;
 }
-.background_top h1{
+.background_top{
     font-size: 24px;
     color: #fff;
 }
@@ -147,6 +161,9 @@ header ul li a{
 }
 .thin{
     font-weight: 100;
+}
+.facebook:hover{
+    cursor: pointer;
 }
 /* SEPARATOR */
 .separator{
@@ -214,6 +231,9 @@ header ul li a{
     -moz-box-shadow: 0px 0px 8px 1px rgba(0,34,255,1);
     box-shadow: 0px 0px 8px 1px rgba(0,34,255,1);
     transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
 }
 /* 
     Created on : 05.11.2015, 14:17:38
