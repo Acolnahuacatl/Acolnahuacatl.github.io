@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'league gothic';
+    src: url('../fonts/League/leaguegothic-regular-webfont.eot');
+    src: url('../fonts/League/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/League/leaguegothic-regular-webfont.woff2') format('woff2'),
+         url('../fonts/League/leaguegothic-regular-webfont.woff') format('woff'),
+         url('../fonts/League/leaguegothic-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open sans light';
+    src: url('../fonts/open-sans/opensans-light-webfont.eot');
+    src: url('../fonts/open-sans/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/open-sans/opensans-light-webfont.woff2') format('woff2'),
+         url('../fonts/open-sans/opensans-light-webfont.woff') format('woff'),
+         url('../fonts/open-sans/opensans-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open sans bold';
+    src: url('../fonts/open-sans-bold/jzvddg2i-webfont.eot');
+    src: url('../fonts/open-sans-bold/jzvddg2i-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/open-sans-bold/jzvddg2i-webfont.woff2') format('woff2'),
+         url('../fonts/open-sans-bold/jzvddg2i-webfont.woff') format('woff'),
+         url('../fonts/open-sans-bold/jzvddg2i-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+nav *, 
+.media-header,
+.paragraph-header,
+.about-description-header,
+.read-more,
+.blog-header,
+.info-big-head,
+.foot-nav{
+    font-family: league gothic, impact, nimbus sans l, ubuntu condensed, monospace;
+}
+.media-paragraph,
+.about-description,
+.blog-paragraph,
+.updates-list,
+.info-paragraph,
+.designet{
+    font-family: open sans light, noto sans, arial, sans-serif;
+}
+.updates-list a,
+.designet span{
+    font-family: open sans bold, arial black, sans-serif;
+}
+/* 
+    Created on : 19.11.2015, 13:04:34
+    Author     : yaroslav
+*/
+
