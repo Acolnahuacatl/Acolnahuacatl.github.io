@@ -37,12 +37,15 @@
     margin: 20px 0 0px;
 }
 .second{
+    margin-top: 18px;
     height: 154px;
 }
 .about-description{
     height: 67px
 }
 .read-more{
+    float: right;
+    padding: 0;
     margin: 10px;
 }
 
@@ -71,7 +74,7 @@
     width: 150px;
     overflow: hidden;
 }
-.read-more{
+.updates-more{
     margin: 16px 68px;
 }
 
