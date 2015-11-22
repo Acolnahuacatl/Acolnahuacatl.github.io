@@ -1,0 +1,125 @@
+
+.wrapper, nav, .media{
+    width: 280px;
+}
+.head{
+    height: 515px;
+}
+.presentation{
+    background: none;
+    height: 225px;
+}
+.media{
+    height: 300px
+}
+.media-text{
+    width: 100%;
+    padding: 0;
+    text-align: center;
+}
+.media-text *{
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}
+.media-active{
+    display: none;
+}
+.change{
+    margin: 0 auto;
+    padding: 0;
+}
+
+.about-wrapper{
+    padding: 50px 0 0;
+}
+.about{
+    margin: 20px 0 0px;
+}
+.second{
+    height: 154px;
+}
+.about-description{
+    height: 67px
+}
+.read-more{
+    margin: 10px;
+}
+
+
+.blog-header{
+    font-size: 25px;
+    width: 100px;
+}
+.blog-paragraph{
+    margin-top: 0px;
+    height: 170px;
+}
+.blog-wrapper:before{
+    left: -20px;
+}
+.updates{
+    padding: 40px 0 0;
+}
+.updats-header{
+    width: 100%;
+    font-size: 28px;
+}
+.updates-item a{
+    display: block;
+    height: 26px;
+    width: 150px;
+    overflow: hidden;
+}
+.read-more{
+    margin: 16px 68px;
+}
+
+.company{
+    height: 420px
+}
+.company-list{
+    padding: 29px 0;
+}
+.com-logo{
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.other-info{
+    display: none;
+}
+.bong{
+    margin: 0 40px;
+}
+.dc{
+    margin: 0 10px
+}
+.tree{
+    margin: 57px 50px 0;
+}
+.awsm{
+    margin: 0 10px
+}
+.rvca{
+    margin: 40px 0  0 20px;
+}
+.vonzipper{
+    margin-left: 50px;
+}
+.foot-nav{
+    display: none;
+}
+.designet{
+    width: 100%;
+    text-align: center;
+    left: 0;
+    margin: 43px auto;
+}
+/* 
+    Created on : 22.11.2015, 17:54:52
+    Author     : yaroslav
+*/
+

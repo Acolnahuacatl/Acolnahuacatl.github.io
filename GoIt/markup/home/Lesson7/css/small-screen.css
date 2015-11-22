@@ -6,6 +6,7 @@ nav, .media, .wrapper{
 }
 nav{
     height: 244px;
+    padding-bottom: 0px;
 }
 .navigation{
     float: none;
@@ -61,10 +62,10 @@ nav{
 }
 .about-description{
     overflow: hidden;
-    height: 135px;
+    height: 145px;
 }
 .read-more{
-    margin: 10px;
+    margin: 0px 10px;
 }
 
 /*ABOUT END*/
