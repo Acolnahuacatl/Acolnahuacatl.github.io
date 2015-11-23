@@ -38,27 +38,19 @@ table td:last-child{
 .rectangle{
     width: 100px;
 }
-.line1{
+tr:first-child{
     height: 120px;
 }
-.line2{
+tr:nth-child(2), tr:nth-child(3){
     height: 300px;
 }
-.line3{
-    height: 300px;
-}
-.line4{
-    height: 150px
-}
-.line5{
+tr:nth-child(4), tr:nth-child(5){
     height: 150px;
 }
-.line6{
+tr:nth-child(6), tr:nth-child(7){
     height: 80px;
 }
-.line7{
-    height: 80px;
-}
+
 /* 
     Created on : 05.11.2015, 12:58:08
     Author     : yaroslav
