@@ -16,7 +16,7 @@ console.log(names);
 var enterUserName = prompt('Введите имя пользователя');
 
 for(var k = 0, l = names.length; k < l; k++) {
-    if (enterUserName == names[k]){
+    if (enterUserName === names[k]){
         var hello = 'Привет ' + names[k];
     }
 }

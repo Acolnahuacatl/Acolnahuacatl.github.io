@@ -17,7 +17,6 @@ function countExponante(a, n){
 }
 
 
-
 if (num, expo){
     if (countExponante(num, expo) >= 0){
         alert('Ваш результат равен '+ countExponante(num, expo));
