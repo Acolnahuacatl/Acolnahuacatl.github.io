@@ -4,15 +4,22 @@
  * and open the template in the editor.
  */
 
+function countExponante(num, expo){
+    var result = num;
 
+    for (var i = 1; i < expo; i++) {
+        result *= num;
+    }
+    
+    return result;
+}
 
-var num = prompt('Введите число');
+var num  = prompt('Введите число');
 var expo = prompt('Введите степень');
 
 if (num, expo){
-    var result = Math.pow(num, expo);
-    if (result >= 0){
-        alert('Ваш результат равен '+ result);
+    if (countExponante(num, expo) >= 0){
+        alert('Ваш результат равен '+ countExponante(num, expo));
     }
     else{
         alert('Введены неверные данные');
