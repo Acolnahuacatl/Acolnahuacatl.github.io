@@ -3,19 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+var num  = prompt('Введите число');
+var expo = prompt('Введите степень');
 
-function countExponante(num, expo){
-    var result = num;
+function countExponante(a, n){
+    var result = a;
 
-    for (var i = 1; i < expo; i++) {
-        result *= num;
+    for (var i = 1; i < n; i++) {
+        result *= a;
     }
     
     return result;
 }
 
-var num  = prompt('Введите число');
-var expo = prompt('Введите степень');
 
 if (num, expo){
     if (countExponante(num, expo) >= 0){
