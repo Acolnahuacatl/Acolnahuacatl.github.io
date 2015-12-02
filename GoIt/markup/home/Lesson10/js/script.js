@@ -8,23 +8,33 @@ var expo = prompt('Введите степень');
 
 function countExponante(a, n){
     var result = a;
-
-    for (var i = 1; i < n; i++) {
-        result *= a;
+    
+    if(n > 0) {
+        for (var i = 1; i < n; i++) {
+            result *= a;
+        }
+    } else if (n < 0) {
+        for (var i = -1; i > n; i--) {
+            result *= a;
+        }
+        result = 1 / result;
+    } else if (n == 0) {
+        result = 1;
     }
     
     return result;
 }
 
+var countResult = countExponante(num, expo);
 
 if (num, expo){
-    if (countExponante(num, expo) >= 0){
-        alert('Ваш результат равен '+ countExponante(num, expo));
+    if (typeof countResult === "number") {
+        alert('Ваш результат равен '+ countResult);
+        console.log('countResult =', countResult);
     }
     else{
         alert('Введены неверные данные');
     }
-}
-else{
+} else {
     alert('Заполните все поля');
 }
