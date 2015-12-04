@@ -4,25 +4,25 @@
  * and open the template in the editor.
  */
 
-var names = ['name'];
-var nameNumber = 1;
+var names = [];
 
 for (var i = 0; i < 6; i++) {
-    names[i] = prompt('Введите ' + nameNumber++ + "-е имя:");
+    names[i] = prompt('Введите ' + (i + 1) + "-е имя:");
 }
 
-console.log(names);
-
-var enterUserName = prompt('Введите имя пользователя');
+var enteredUserName = prompt('Введите имя пользователя');
+var flag = false;
+var hello = 'Привет ' + enteredUserName;
 
 for(var k = 0, l = names.length; k < l; k++) {
-    if (enterUserName === names[k]){
-        var hello = 'Привет ' + names[k];
+    if (enteredUserName === names[k]) {
+        flag = true;
+        break;
     }
 }
 
-if (hello) {
+if (flag) {
     alert(hello);
 } else {
-    alert('Имя пользователя введено нe верно!');
+    alert(hello + ', имя пользователя введено нe верно!');
 }
