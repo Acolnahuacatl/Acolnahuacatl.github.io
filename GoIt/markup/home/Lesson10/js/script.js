@@ -9,17 +9,21 @@ var expo = prompt('Введите степень');
 function countExponante(a, n){
     var result = a;
     
-    if(n > 0) {
-        for (var i = 1; i < n; i++) {
-            result *= a;
+    if (n%1 > 0) {
+        alert('LOL');
+    } else {
+        if(n > 0) {
+            for (var i = 1; i < n; i++) {
+                result *= a;
+            }
+        } else if (n < 0) {
+            for (var i = -1; i > n; i--) {
+                result *= a;
+            }
+            result = 1 / result;
+        } else if (n == 0) {
+            result = 1;
         }
-    } else if (n < 0) {
-        for (var i = -1; i > n; i--) {
-            result *= a;
-        }
-        result = 1 / result;
-    } else if (n == 0) {
-        result = 1;
     }
     
     return result;
