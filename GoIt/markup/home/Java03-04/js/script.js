@@ -18,16 +18,18 @@ var app = {
             element.innerHTML = params.content;
         }
         if (params.parent){
-        params.parent.appendChild(element);
+            params.parent.appendChild(element);
         }
         return element;
     },
     genQuestion: function(questions, ansvers) {
+        
         var fildset = document.querySelector('fildset');
+        
         var ul = app.genElements({
-        tagName: 'ul',
-        className: 'question-list',
-        parent: fildset
+            tagName: 'ul',
+            className: 'question-list',
+            parent: fildset
         });
         for (var i = 0; i < questions; i++) {
                 var li = this.genElements({
@@ -63,7 +65,6 @@ var button = app.genElements({
     parent: body
 });
 
-//button.setAttribute('value', 'Tuch Me!');
 button.setAttribute('onmouseover', 'overButton()');
 button.setAttribute('onClick', 'tuchMe()');
 button.setAttribute('onmouseout', 'haHa()');
@@ -78,20 +79,33 @@ function haHa(){
     
 function tuchMe(){
     var javaForm = app.genElements({
-    tagName: 'form',
-    className: 'wrapper',
-    parent: body
-});
+        tagName: 'form',
+        className: 'wrapper',
+        parent: body
+    });
+    var close = app.genElements({
+        tagName: 'button',
+        className: 'close-button',
+        parent: javaForm
+    });
+    
+    close.setAttribute('onClick', 'closeMe()');
+    
+    function closeMe(){
+      javaForm = undefined;  
+    };
+    
     var javaFildset = app.genElements({
-    tagName: 'fildset',
-    parent: javaForm
-});
+        tagName: 'fildset',
+        parent: javaForm
+    });
     app.genElements({
-    tagName: 'legend',
-    className: 'java-legend',
-    content: 'Тест по программированию',
-    parent: javaFildset
-});
+        tagName: 'legend',
+        className: 'java-legend',
+        content: 'Тест по программированию',
+        parent: javaFildset
+    });
+    
     app.genQuestion(3, 3);
     
     app.genElements({

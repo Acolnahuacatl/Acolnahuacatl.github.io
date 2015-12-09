@@ -61,6 +61,20 @@ body{
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
 }
+.close-button{
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    right: 0;
+    margin: 10px;
+    background: url(http://den.gd.ru/img/close.png);
+    background-size: cover;
+    outline: none;
+    border: none;
+}
+.close-button:hover{
+    cursor: pointer;
+}
 .java-legend{
     margin: 20px auto;
     font-size: 20px;
