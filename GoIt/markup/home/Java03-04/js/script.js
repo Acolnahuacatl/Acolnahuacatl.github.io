@@ -155,8 +155,6 @@ var app = {
 
 var body = document.querySelector('body');
 
-var body = document.querySelector('body');
-
 var button = app.genElement({
     tagName: 'input',
     className: 'javaStart',
