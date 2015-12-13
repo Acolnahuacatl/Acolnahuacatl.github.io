@@ -99,16 +99,16 @@ var app = {
                 className: 'java-label',
                 parent: li
             });
-        for (var k = 0; k < content.ansv.length; k++){
-            label.innerHTML = content.ansv[i];
-        }
-        var checkbox = this.genElement({
-            tagName: 'input',
-            attrs: {
-                type: 'checkbox'
+            for (var k = 0; k < content.ansv.length; k++){
+                label.innerHTML = content.ansv[i];
             }
-        });
-        label.insertAdjacentElement('afterBegin', checkbox);
+            var checkbox = this.genElement({
+                tagName: 'input',
+                attrs: {
+                    type: 'checkbox'
+                }
+            });
+            label.insertAdjacentElement('afterBegin', checkbox);
         }
     },
     attachEvent: function (event){
