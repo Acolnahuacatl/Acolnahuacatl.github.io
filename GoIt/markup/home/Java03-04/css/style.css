@@ -48,6 +48,10 @@ body{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=0 );
 }
 
+.begin{
+    display: none;
+}
+
 .wrapper{
     height: 900px;
     width: 700px;
