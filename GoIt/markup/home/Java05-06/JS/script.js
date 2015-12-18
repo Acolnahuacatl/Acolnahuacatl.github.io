@@ -109,7 +109,6 @@ var app = {
             splitResul.classList.add('split-result');
             
             clickAudio.play();
-            startButton.classList.remove('button-active');
             splitCounter++;
         }
         
@@ -123,6 +122,7 @@ var app = {
             scoreboard.value = '00:00:00.000';
             startDesc.innerHTML = 'Start';
             counter = 0;
+            splitCounter = 1;
             startButton.classList.remove('button-active');
             splitButton.classList.remove('button-active');
         }
