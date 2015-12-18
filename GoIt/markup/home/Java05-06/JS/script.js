@@ -109,7 +109,6 @@ var app = {
             splitResul.classList.add('split-result');
             
             clickAudio.play();
-            startButton.classList.remove('button-active');
             splitCounter++;
         }
         
