@@ -25,21 +25,8 @@ input:focus, button:focus, textArea:focus{
 }
 
 body{
-    height: 78.5vh;
-    background: #000 url('../images/vault_boy.jpg') no-repeat 100%/200px;
-    background-position-y: bottom;
-}
-
-@media screen and (max-height: 800px){
-    body{
-        height: 73vh;
-    }
-}
-
-@media screen and (max-height: 700px){
-    body{
-        height: 70vh;
-    }
+    background: #000 url('../images/background.jpg') no-repeat ;
+    background-size: cover;
 }
 
 body, input{
