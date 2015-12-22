@@ -41,12 +41,11 @@ var app = {
                     number[2] = number[2]++;
                 }
                 if (number[2] > 59) {
-                    
                     number[2] = '00';
                     number[1]++;
                     number[1] = '0' + number[1];
                     if (number[1] > 9) {
-                        number[1] = number[2]++;
+                        number[1] = number[1]++;
                     }
                     if (number[1] > 59) {
                         number[1] = '00';
@@ -163,7 +162,7 @@ var app = {
         startButton.addEventListener('click', start);
         splitButton.addEventListener('click', split);
         stopButton.addEventListener('click', stop);
-        for (var i in buttons) {
+        for (var i = 0; i < buttons.length; i++) {
             var button = buttons[i];
             
             button.addEventListener('mouseover', over, false);
