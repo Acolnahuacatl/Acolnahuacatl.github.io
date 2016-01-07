@@ -186,7 +186,6 @@ legend{
     transition: all 0.5s linear;
 }
 .input:focus{
-    background: black;
     background: rgba(52,141,171,0.2);
 }
 .button{
