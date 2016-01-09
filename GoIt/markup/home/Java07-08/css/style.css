@@ -113,7 +113,6 @@ ul{
     background: -ms-linear-gradient(left, rgba(127,181,208,1) 0%, rgba(127,181,208,0) 3%, rgba(127,181,208,0) 97%, rgba(127,181,208,1) 100%);
     background: linear-gradient(to right, rgba(127,181,208,1) 0%, rgba(127,181,208,0) 3%, rgba(127,181,208,0) 97%, rgba(127,181,208,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7fb5d0', endColorstr='#7fb5d0', GradientType=1 );
-    transition: all 2s linear;
     animation: text-anim-on 2s linear;
     opacity: 1;
 }
