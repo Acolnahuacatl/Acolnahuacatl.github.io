@@ -5,7 +5,7 @@
  */
 
 $(function () {
-        var $link = $('.tab-link');
+    var $link = $('.tab-link');
     
     
     $link.on('click', function (e) {
@@ -43,17 +43,15 @@ $(function () {
     
     var $input = $('.input');
     
-    $input.on('mouseover', function (e){
+    $input.on('mouseover', function (){
         var $help = $(this).siblings('p'); 
-        e.preventDefault();
         
         $help.addClass('active-help');
         $help.removeClass('hidden-help');
         
     });
-    $input.on('mouseout', function (e){
+    $input.on('mouseout', function (){
         var $help = $(this).siblings('p'); 
-        e.preventDefault();
         
         $help.removeClass('active-help');
         $help.addClass('hidden-help');
