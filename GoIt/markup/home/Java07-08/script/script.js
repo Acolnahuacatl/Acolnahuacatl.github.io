@@ -5,40 +5,22 @@
  */
 
 $(function () {
-    var $link = $('.tab-link');
-    
+    var $link = $('.tab');
+    var $tabContent = $('.tab-content');
     
     $link.on('click', function (e) {
-        var $hidden = $('.active');
-        var $links = $('.selected');
-        var $content = $('.cut p');
+
         e.preventDefault();
+        var index = $(this).index();
+      
+        console.log(index);
         
-        if (this.href.match('tab-2')) {
-        $content.eq(1).addClass('active-tab');
-        $content.eq(0).removeClass('active-tab');
-        $content.eq(2).removeClass('active-tab');
-        $content.eq(0).addClass('hidden');
-        $content.eq(2).addClass('hidden');
-        }
-        if (this.href.match('tab-1')) {
-        $content.eq(0).addClass('active-tab');
-        $content.eq(1).removeClass('active-tab');
-        $content.eq(2).removeClass('active-tab');
-        $content.eq(1).addClass('hidden');
-        $content.eq(2).addClass('hidden');
-        }
-        if (this.href.match('tab-3')) {
-        $content.eq(2).addClass('active-tab');
-        $content.eq(0).removeClass('active-tab');
-        $content.eq(1).removeClass('active-tab');
-        $content.eq(0).addClass('hidden');
-        $content.eq(1).addClass('hidden');
-        }
-            
-        $hidden.removeClass('active');
-        $links.removeClass('selected');
-        $(this).addClass('active');
+        $link.children('a').removeClass('active');
+        $(this).children('a').addClass('active');
+        
+        $tabContent.removeClass('active-tab');
+        $tabContent.addClass('hidden');
+        $tabContent.eq(index).addClass('active-tab');
     });
     
     var $input = $('.input');
