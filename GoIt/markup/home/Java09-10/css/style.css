@@ -1,0 +1,52 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+
+body {
+    background: #EAE8E5;
+}
+
+.jcarousel img{
+    height: 400px;
+    width: 600px;
+}
+
+h2{
+    margin: 0 auto;
+    width: 150px;
+    text-align: center;
+}
+.select-plugin{
+    height: 50px;
+}
+
+.niceCheck {
+    width: 17px;
+    height: 17px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin: 0px 5px;
+    background: url(../img/checkbox_unchecked1.png)  no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.niceChecked {
+    background: url(../img/checkbox-checked1.png);
+    background-size: cover;
+}
+.nice-checkbox{
+    //margin-left: -800px; /* можно задать побольше чтобы наверняка скрыть поле */
+    //display: none;
+}
+.niceCheckDisabled {
+    background-image: url(../img/checkbox-disabled.png);
+}
+
+/* 
+    Created on : 10.01.2016, 16:51:52
+    Author     : yaroslav
+*/
+
