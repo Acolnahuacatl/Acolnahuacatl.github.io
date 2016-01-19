@@ -66,7 +66,6 @@ h2:after{
     margin-left: -800px; /* можно задать побольше чтобы наверняка скрыть поле */
 }
 
-
 .CSS-checkbox input[type=checkbox]{
     display: none;
 }
@@ -91,14 +90,17 @@ h2:after{
     height: 30px;
     line-height: 30px;
     font-family: arial;
+    transition: 0.3s linear;
+}
+.menu a:hover{
+    color: black;
+    text-shadow: 0px 0px 11px rgba(0, 0, 0, 1);
 }
 .dropdown a{
     border-bottom: 1px solid 
-    
 }
 .dropdown li:last-child a{
     border-bottom: none; 
-    
 }
 .sub-menu,
 .dropdown{
@@ -107,6 +109,7 @@ h2:after{
     background: slategrey;
     padding: 0;
     display: none;
+    z-index: 1;
 }
 .dropdown-item{
     position: relative;
