@@ -7,22 +7,42 @@ and open the template in the editor.
 body {
     background: #EAE8E5;
 }
+h2{
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    position: relative;
+}
+h2:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0%;
+    height: 2px;
+    background: rgba(242,246,248,0.52);
+    background: -moz-linear-gradient(left, rgba(242,246,248,0.52) 0%, rgba(181,198,208,1) 51%, rgba(224,239,249,0.45) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(242,246,248,0.52)), color-stop(51%, rgba(181,198,208,1)), color-stop(100%, rgba(224,239,249,0.45)));
+    background: -webkit-linear-gradient(left, rgba(242,246,248,0.52) 0%, rgba(181,198,208,1) 51%, rgba(224,239,249,0.45) 100%);
+    background: -o-linear-gradient(left, rgba(242,246,248,0.52) 0%, rgba(181,198,208,1) 51%, rgba(224,239,249,0.45) 100%);
+    background: -ms-linear-gradient(left, rgba(242,246,248,0.52) 0%, rgba(181,198,208,1) 51%, rgba(224,239,249,0.45) 100%);
+    background: linear-gradient(to right, rgba(242,246,248,0.52) 0%, rgba(181,198,208,1) 51%, rgba(224,239,249,0.45) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9', GradientType=1 );
+}
 
 .jcarousel img{
     height: 400px;
     width: 600px;
 }
 
-h2{
-    margin: 0 auto;
-    width: 150px;
-    text-align: center;
-}
 .select-plugin{
     height: 50px;
 }
 
-.niceCheck {
+/*Checkbox JS*/
+.CSS-checkbox label:before, 
+.niceCheck{
+    content: "";
     width: 17px;
     height: 17px;
     position: relative;
@@ -33,18 +53,68 @@ h2{
     background-size: cover;
     overflow: hidden;
 }
-.niceChecked {
-    background: url(../img/checkbox-checked1.png);
-    background-size: cover;
+
+.CSS-checkbox input[type=checkbox]:checked + label:before,
+.niceChecked{
+    background-image: url(../img/checkbox-checked1.png);
 }
-.nice-checkbox{
-    //margin-left: -800px; /* можно задать побольше чтобы наверняка скрыть поле */
-    //display: none;
-}
-.niceCheckDisabled {
+.CSS-checkbox input[type=checkbox]:disabled + label:before,
+.niceCheckDisabled{
     background-image: url(../img/checkbox-disabled.png);
 }
+.hide-checkbox{
+    margin-left: -800px; /* можно задать побольше чтобы наверняка скрыть поле */
+}
 
+
+.CSS-checkbox input[type=checkbox]{
+    display: none;
+}
+
+.menu,
+.dropdown,
+.sub-menu{
+    list-style: none;
+    background: slategray;
+}
+.menu-item{
+    display: inline-block;
+    position: relative;
+    margin: 0 10px;
+}
+.menu a{
+    display: block;
+    width: 150px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    height: 30px;
+    line-height: 30px;
+    font-family: arial;
+}
+.dropdown a{
+    border-bottom: 1px solid 
+    
+}
+.dropdown li:last-child a{
+    border-bottom: none; 
+    
+}
+.sub-menu,
+.dropdown{
+    position: absolute;
+    width: 100%;
+    background: slategrey;
+    padding: 0;
+    display: none;
+}
+.dropdown-item{
+    position: relative;
+}
+.sub-menu{
+    left: 100%;
+    top: 0;
+}
 /* 
     Created on : 10.01.2016, 16:51:52
     Author     : yaroslav

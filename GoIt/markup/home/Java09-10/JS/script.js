@@ -10,27 +10,25 @@ $(function () {
 
 // Checkbox
 
- 
 function checkBox () {
-    var $checkbox = $('.nice-checkbox');
-    var index = $('.nice-checkbox').index();
+    var $checkbox = $('.nice-checkbox input');
+    var index = $checkbox.length;
+    
+    $checkbox.addClass('hide-checkbox');
     
     var $check = $('<p>', {
        class: 'niceCheck'
     }).insertBefore($checkbox);
     
-    console.log(index);
-    if ($checkbox.eq(index).is(':disabled')){
-        $checkbox.eq(index).siblings('p').addClass('niceCheckDisabled');
-    } else if ($checkbox.eq(index).is(':checked')) {
-        $checkbox.eq(index).siblings('p').addClass('niceChecked');}
-    
-//    for (var i = 0;  i < index; i++) {
-//    }
+    for (var i = 0;  i < index; i++) {
+        if ($checkbox.eq(i).is(':disabled')){
+            $checkbox.eq(i).siblings('p').addClass('niceCheckDisabled');
+    } else if ($checkbox.eq(i).is(':checked')) {
+        $checkbox.eq(i).siblings('p').addClass('niceChecked');}
+    }
     
     $checkbox.on('click', function () {
-        if ($checkbox.prop('checked')){
-        //if ($checkbox.is(':checked')){
+        if ($(this).prop('checked')){
             $(this).siblings('p').addClass('niceChecked');
         } else {
             $(this).siblings('p').removeClass('niceChecked');
@@ -42,7 +40,6 @@ function checkBox () {
                 
         } else
             if ($(this).hasClass('niceChecked')){
-            //if ($(this).siblings('input').is(':checked')){
                 $(this).removeClass('niceChecked');
                 $(this).siblings('input').attr('checked', false);
                 $(this).siblings('input').prop('checked', false);
@@ -51,10 +48,19 @@ function checkBox () {
                 $(this).siblings('input').attr('checked', true);
                 $(this).siblings('input').prop('checked', true);
             }
-        
     });
-    
-    
 }
 
 checkBox();
+
+$(function () {
+    var $links = $('.menu li');
+    
+    $links.hover(function() {
+        var $submenu = $(this).children('ul');
+        $submenu.show("fast", arguments.callee);
+    }, function () {
+        var $submenu = $(this).children('ul');
+        $submenu.hide('2000');
+    });
+});
