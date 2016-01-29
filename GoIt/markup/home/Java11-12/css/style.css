@@ -28,7 +28,6 @@ body{
         transform: perspective(1000px) rotate3d(0, 1, 0, -80deg);
         margin: 0 auto;
         position: relative;
-        //rotation: 40deg;
     }
     to{
         transform: perspective(1000px) rotate3d(0, 1, 0, -0deg);
@@ -47,7 +46,6 @@ body{
 .following{
     margin: 0 auto;
     position: relative;
-    //rotation: 40deg;
     transform: perspective(700px)  rotate3d(0, 1, 0, -80deg);
 }
 .following img{
@@ -166,19 +164,21 @@ body{
         height: 100px;
         width: 780px;
     }
-/*    50%{
-        height: 75px;
-        width: 490px;
-    }
-    75%{
-        width: 610px;
-    }*/
     100%{
         height: 30px;
         width: 120px;
     }
 }
-
+@keyframes back-img{
+    0%{
+        height: 30px;
+        width: 120px;
+    }
+    100%{
+        height: 100px;
+        width: 780px;
+    }
+}
 
 /*REFLECT FOLLOWING*/
 
@@ -199,10 +199,10 @@ body{
 .following-reflect img{
     height: 30px;
     width: 120px;
-    //transition: all 0.5s linear;
-
 }
-
+.following img {
+    animation: back-img 1s linear;
+}
 
 /*REFLECT ACTIVE READY*/
 
@@ -219,32 +219,25 @@ body{
     filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
     -webkit-transition: 1s -webkit-filter linear;
     transform: rotate(-0deg) scale(0.72) skew(-42deg) translate(0px) scaleY(-1) perspective(200px) rotate3d(1, 0, 0, -30deg);
-    //transform: rotate(0deg) scale(0.72) skew(-40deg) translate(0px) scaleY(-1) perspective(200px) rotate3d(1, 0, 0, -30deg);
-    //transition: all 1s linear;
-    animation: following 0.4s linear;
+    //animation: following 0.4s linear;
 }
 .active-reflect img{
     height: 100px;
     width: 780px;
-    //transition: all 1s linear;
-    animation: following-img 0.4s linear;
+    //animation: following-img 0.4s linear;
 }
 
 .pervius{
     margin: 0 auto;
     position: relative;
-    //top: 68px;
-    //rotation: 40deg;
     transition: all 0.4s linear;
-    //animation: pervius-li 1s linear;
-    transform: perspective(700px)  rotate3d(0, 1, 0, 74deg);
+    transform: perspective(700px) rotate3d(0, 1, 0, 74deg);
 }
 .pervius img{
-    //height: 300px;
     width: 479px;
-    -webkit-box-shadow: 14px 0px 20px -7px rgba(0,0,0,0.75);
-    -moz-box-shadow: 14px 0px 20px -7px rgba(0,0,0,0.75);
-    box-shadow: 14px 0px 20px -7px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -14px 0px 20px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: -14px 0px 20px -7px rgba(0,0,0,0.75);
+    box-shadow: -14px 0px 20px -7px rgba(0,0,0,0.75);
     transition: all 0.4s linear;
 }
 
@@ -260,19 +253,13 @@ body{
     filter: blur(3px);
     filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
     transform: rotate(-37deg) scale(0.79) skew(45deg) translate(-5px) scaleY(-1) perspective(100px) rotate3d(1, 0, 0, -30deg);
-    //transition: all 1s linear;
     animation: forwarding 0.4s linear;
-    //animation-direction: alternate;
 }
 .pervius-reflect img{
     height: 30px;
     width: 135px; 
-    //transition: all 1s linear;
     animation: forward-img 0.4s linear;
 }
-
-
-
 
 /*BUTTON*/
 
@@ -305,8 +292,9 @@ body{
 }
 .counter{
     position: absolute;
-    top:460px;
-    left: 46.2%;
+    top:457px;
+    left: 42.2%;
+    width: 15.6%;
     text-align: center;
     background: none;
     border: none;

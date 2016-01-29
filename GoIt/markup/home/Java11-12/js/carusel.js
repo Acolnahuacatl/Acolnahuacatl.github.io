@@ -9,6 +9,7 @@ $(function() {
 
 (function ($) {
     $.fn.carusel = function(options) {
+        //над опциями будем сооброжать потом
         
         var caruselImg = $('.carusel img');
         var createWrapperImg = $('<div/>');
@@ -42,7 +43,7 @@ $(function() {
 
         list.eq(0).addClass('active-li');
         list.eq(0).css({
-            left: 50+'%',
+            left: 50 + '%',
             top: 50 + 'px'
             });
 
@@ -78,7 +79,7 @@ $(function() {
                 $('.pervius-li').removeClass('active-li');
 
                 var pervius = $('.pervius-li');
-                console.log(pervius.length);
+                
                 for ( var i = pervius.length, shift = 18.5; i > 0; i--) {
                     pervius.eq(i - 1).css({
                         left: shift + '%',
@@ -120,8 +121,67 @@ $(function() {
             };
         };
         
+        //некое подобиу функции на кнопку вперед написал, теперь то-же но в обратном порядке О_о
+        
+        function backward() {
+            var back = $('.pervius-li');
+            
+            if(back.length > 0) {
+                $('.active-li').addClass('following-li');
+                $('.following-li').removeClass('active-li');
+
+                var following = $('.following-li');
+                
+                for ( var i = 0, shift = 75; i < following.length; i++) {
+                    var index = 1000 - i;
+                    
+                    following.eq(i).css({
+                        left: shift + '%',
+                        zIndex: index,
+                        top: 175 + 'px'
+                    });
+                    shift = shift + 3;
+
+                    
+                };
+                
+                following.eq(0).children('.active').addClass('following');
+                following.eq(0).children('.active').removeClass('active');
+                following.eq(0).children('.active-reflect').addClass('following-reflect');
+                following.eq(0).children('.active-reflect').removeClass('active-reflect');
+                
+                //эта часть готова (правда опять прийдеться скоректировать анимашку
+                
+                for ( var i = back.length, shift = 21.5; i > 0; i--) {
+                    back.eq(i - 1).css({
+                        left: shift + '%',
+                        zIndex: i,
+                        top: 120 + 'px'
+                    });
+                    shift = shift - 3;
+                    
+                    $('.counter').attr({
+                       value: back.length + '/' +  caruselImg.length
+                    });
+                };
+                back.eq(back.length - 1).addClass('active-li');
+                back.eq(back.length - 1).removeClass('pervius-li');
+                back.eq(back.length - 1).css({
+                    left: 50 + '%',
+                    top: 50 + 'px'
+                });
+
+                back.eq(back.length - 1).children('.pervius').addClass('active');
+                back.eq(back.length - 1).children('.pervius').removeClass('pervius');
+
+                back.eq(back.length - 1).children('.pervius-reflect').addClass('active-reflect');
+                back.eq(back.length - 1).children('.pervius-reflect').removeClass('pervius-reflect');
+            }
+        };
+        
         $('.forward').on('click', forward);
-        //return this;
+        $('.backward').on('click', backward);
+        
     };
 })(jQuery);
 
