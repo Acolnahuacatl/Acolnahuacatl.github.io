@@ -94,14 +94,17 @@ $(function() {
                 };
                 
                 pervius.eq(pervius.length - 1).children('.active').addClass('pervius');
+                pervius.eq(pervius.length - 1).children('.active').removeClass('active-anim-forward');
+                pervius.eq(pervius.length - 1).children('.active').removeClass('active-anim-back');
                 pervius.eq(pervius.length - 1).children('.active').removeClass('active');
+                
                 pervius.eq(pervius.length - 1).children('.active-reflect').addClass('pervius-reflect');
                 pervius.eq(pervius.length - 1).children('.active-reflect').removeClass('active-reflect');
 
                 for ( var i = 0, shift = 72; i < next.length; i++) {
 
                     next.eq(i).css({
-                        left: shift + '%'
+                        left: shift + '%',
                     });
                     
                     shift = shift + 3;
@@ -114,10 +117,13 @@ $(function() {
                 });
 
                 next.eq(0).children('.following').addClass('active');
+                next.eq(0).children('.following').addClass('active-anim-forward'); //может так?
                 next.eq(0).children('.following').removeClass('following');
 
                 next.eq(0).children('.following-reflect').addClass('active-reflect');
                 next.eq(0).children('.following-reflect').removeClass('following-reflect');
+                
+                
             };
         };
         
@@ -136,8 +142,8 @@ $(function() {
                     var index = 1000 - i;
                     
                     following.eq(i).css({
-                        left: shift + '%',
                         zIndex: index,
+                        left: shift + '%',
                         top: 175 + 'px'
                     });
                     shift = shift + 3;
@@ -146,7 +152,10 @@ $(function() {
                 };
                 
                 following.eq(0).children('.active').addClass('following');
+                following.eq(0).children('.active').removeClass('active-anim-forward');
+                following.eq(0).children('.active').removeClass('active-anim-back');
                 following.eq(0).children('.active').removeClass('active');
+                
                 following.eq(0).children('.active-reflect').addClass('following-reflect');
                 following.eq(0).children('.active-reflect').removeClass('active-reflect');
                 
@@ -155,7 +164,6 @@ $(function() {
                 for ( var i = back.length, shift = 21.5; i > 0; i--) {
                     back.eq(i - 1).css({
                         left: shift + '%',
-                        zIndex: i,
                         top: 120 + 'px'
                     });
                     shift = shift - 3;
@@ -172,12 +180,19 @@ $(function() {
                 });
 
                 back.eq(back.length - 1).children('.pervius').addClass('active');
+                back.eq(back.length - 1).children('.pervius').addClass('active-anim-back');
                 back.eq(back.length - 1).children('.pervius').removeClass('pervius');
 
                 back.eq(back.length - 1).children('.pervius-reflect').addClass('active-reflect');
                 back.eq(back.length - 1).children('.pervius-reflect').removeClass('pervius-reflect');
-            }
+                
+                $('.active-li').css({
+                    zIndex: 1001
+                });
+            };
         };
+        
+        //нечто вышло, осталось поработать с анимацией при листинге назад 
         
         $('.forward').on('click', forward);
         $('.backward').on('click', backward);

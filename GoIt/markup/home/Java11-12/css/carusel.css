@@ -23,9 +23,19 @@ body{
     position: relative;
     transition: all 0.4s linear;
 }
-@keyframes imglol{
+@keyframes img-forward{
     from{
         transform: perspective(1000px) rotate3d(0, 1, 0, -80deg);
+        margin: 0 auto;
+        position: relative;
+    }
+    to{
+        transform: perspective(1000px) rotate3d(0, 1, 0, -0deg);
+    }
+}
+@keyframes img-back{
+    from{
+        transform: perspective(700px) rotate3d(0, 1, 0, 74deg);
         margin: 0 auto;
         position: relative;
     }
@@ -43,16 +53,7 @@ body{
     transition: all 0.4s linear;
 }
 
-.following{
-    margin: 0 auto;
-    position: relative;
-    transform: perspective(700px)  rotate3d(0, 1, 0, -80deg);
-}
-.following img{
-    -webkit-box-shadow: 14px 0px 20px -7px rgba(0,0,0,0.75);
-    -moz-box-shadow: 14px 0px 20px -7px rgba(0,0,0,0.75);
-    box-shadow: 14px 0px 20px -7px rgba(0,0,0,0.75);
-}
+
 .carusel li{
     position: absolute;
     top: 175px;
@@ -65,9 +66,18 @@ body{
 }
 
 .active{
-    filter: FlipH;
-    -ms-filter: "FlipH"; 
-    animation: imglol 0.4s linear;
+    //filter: FlipH;
+    //-ms-filter: "FlipH"; 
+    position: relative;
+    transform: perspective(700px)  rotate3d(0, 1, 0, 0deg);
+}
+.active-anim-forward{
+    animation: img-forward 0.4s linear;
+    
+}
+.active-anim-back{
+    animation: img-back 0.4s linear;
+    
 }
 .active img{
     width: 500px;
@@ -171,15 +181,23 @@ body{
 }
 @keyframes back-img{
     0%{
-        height: 30px;
-        width: 120px;
+        transform: perspective(700px)  rotate3d(0, 1, 0, 0deg);
     }
     100%{
-        height: 100px;
-        width: 780px;
+        transform: perspective(700px)  rotate3d(0, 1, 0, -80deg);
     }
 }
-
+.following{
+    margin: 0 auto;
+    position: relative;
+    transform: perspective(700px)  rotate3d(0, 1, 0, -80deg);
+    animation: back-img 0.4s linear;
+}
+.following img{
+    -webkit-box-shadow: 14px 0px 20px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 14px 0px 20px -7px rgba(0,0,0,0.75);
+    box-shadow: 14px 0px 20px -7px rgba(0,0,0,0.75);
+}
 /*REFLECT FOLLOWING*/
 
 .following-reflect{
@@ -195,13 +213,14 @@ body{
     filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
     transform: rotate(37deg) scale(0.799) skew(-54deg) translate(-14px) scaleY(-1) perspective(100px) rotate3d(1, 0, 0, -30deg);
     transition: all 0.4s linear;
+    //animation: alternate following 0.4s linear;
 }
 .following-reflect img{
     height: 30px;
     width: 120px;
 }
 .following img {
-    animation: back-img 1s linear;
+    
 }
 
 /*REFLECT ACTIVE READY*/
@@ -219,12 +238,12 @@ body{
     filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
     -webkit-transition: 1s -webkit-filter linear;
     transform: rotate(-0deg) scale(0.72) skew(-42deg) translate(0px) scaleY(-1) perspective(200px) rotate3d(1, 0, 0, -30deg);
-    //animation: following 0.4s linear;
+    animation: following 0.4s linear;
 }
 .active-reflect img{
     height: 100px;
     width: 780px;
-    //animation: following-img 0.4s linear;
+    animation: following-img 0.4s linear;
 }
 
 .pervius{
