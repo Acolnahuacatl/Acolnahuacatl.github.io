@@ -7,7 +7,21 @@
     $.fn.carusel = function(options) {
         //над опциями будем сооброжать потом
         
-        var caruselImg = $('.carusel img');
+        var defaults = {
+                reflection: true,
+                animation: {
+                    
+                },
+                reflectAnimation: {
+                    
+                }
+        };
+        
+        var settings = $.extend(defaults, options);  // берет поля из options и записывает в defoult
+        
+        var caruselImg = $('img');
+        console.log(caruselImg);
+        
         var createWrapperImg = $('<div/>');
         var list = $('.carusel li');
 
@@ -20,8 +34,12 @@
         for (var i = 0, left = 75; i < list.length; i++) {
             var index = 1000 - i;
             var src = caruselImg.eq(i).attr('src');
-            var reflect = $('<div><img src="'+ (src) +'" alt=""></div>');
-
+            if (settings.reflection) {
+                var reflect = $('<div><img src="'+ (src) +'" alt=""></div>');
+                reflect.insertAfter(wrapperImg[i]);
+                reflect.addClass('reflect');
+            }
+            
             list.eq(i).css({
                 zIndex: index,
                 left: left + '%'
@@ -29,14 +47,13 @@
 
             left = left +3;
 
-            reflect.insertAfter(wrapperImg[i]);
             wrapperImg.eq(i+1).addClass('following');
             list.eq(i+1).addClass('following-li');
-            reflect.addClass('reflect');
         }
 
-        list.eq(0).addClass('active-li');
-        list.eq(0).css({
+        list.eq(0)
+            .addClass('active-li')
+            .css({
             left: 50 + '%',
             top: 50 + 'px'
             });
@@ -79,41 +96,35 @@
                     });
                     shift = shift - 3;
 
-                    $('.counter').attr({
-                       value: pervius.length + 1 + '/' +  caruselImg.length
-                    });
+                    $('.counter').val(pervius.length + 1 + '/' +  caruselImg.length);
                 };
                 
                 pervius.eq(pervius.length - 1).children('.active').addClass('pervius');
-                pervius.eq(pervius.length - 1).children('.active').removeClass('active-anim-forward');
-                pervius.eq(pervius.length - 1).children('.active').removeClass('active-anim-back');
-                pervius.eq(pervius.length - 1).children('.active').removeClass('active');
+                pervius.eq(pervius.length - 1).children('.active').removeClass('active-anim-forward active-anim-back active');
                 
                 pervius.eq(pervius.length - 1).children('.active-reflect').addClass('pervius-reflect');
-                pervius.eq(pervius.length - 1).children('.active-reflect').removeClass('active-reflect-anim-forward');
-                pervius.eq(pervius.length - 1).children('.active-reflect').removeClass('active-reflect');
+                pervius.eq(pervius.length - 1).children('.active-reflect').removeClass('active-reflect-anim-forward active-reflect');
 
                 for ( var i = 0, shift = 72; i < next.length; i++) {
 
                     next.eq(i).css({
-                        left: shift + '%',
+                        left: shift + '%'
                     });
                     
                     shift = shift + 3;
                 };
-                next.eq(0).addClass('active-li');
-                next.eq(0).removeClass('following-li');
-                next.eq(0).css({
+                next.eq(0)
+                    .addClass('active-li')
+                    .removeClass('following-li')
+                    .css({
                     left: 50 + '%',
                     top: 50 + 'px'
                 });
 
-                next.eq(0).children('.following').addClass('active');
-                next.eq(0).children('.following').addClass('active-anim-forward'); //может так?
+                next.eq(0).children('.following').addClass('active active-anim-forward');
                 next.eq(0).children('.following').removeClass('following');
 
-                next.eq(0).children('.following-reflect').addClass('active-reflect');
-                next.eq(0).children('.following-reflect').addClass('active-reflect-anim-forward');
+                next.eq(0).children('.following-reflect').addClass('active-reflect active-reflect-anim-forward');
                 next.eq(0).children('.following-reflect').removeClass('following-reflect');
             };
         };
@@ -141,13 +152,10 @@
                 };
                 
                 following.eq(0).children('.active').addClass('following');
-                following.eq(0).children('.active').removeClass('active-anim-forward');
-                following.eq(0).children('.active').removeClass('active-anim-back');
-                following.eq(0).children('.active').removeClass('active');
+                following.eq(0).children('.active').removeClass('active-anim-forward active-anim-back active');
                 
                 following.eq(0).children('.active-reflect').addClass('following-reflect');
-                following.eq(0).children('.active-reflect').removeClass('active-reflect-anim-back');
-                following.eq(0).children('.active-reflect').removeClass('active-reflect');
+                following.eq(0).children('.active-reflect').removeClass('active-reflect-anim-back active-reflect');
                 
                 //эта часть готова (правда опять прийдеться скоректировать анимашку
                 
@@ -158,25 +166,24 @@
                     });
                     shift = shift - 3;
                     
-                    $('.counter').attr({
-                       value: back.length + '/' +  caruselImg.length
-                    });
+                    $('.counter').val(back.length + '/' +  caruselImg.length);
                 };
-                back.eq(back.length - 1).addClass('active-li');
-                back.eq(back.length - 1).removeClass('pervius-li');
-                back.eq(back.length - 1).css({
+                back.eq(back.length - 1)
+                    .addClass('active-li')
+                    .removeClass('pervius-li')
+                    .css({
                     left: 50 + '%',
                     top: 50 + 'px'
                 });
 
-                back.eq(back.length - 1).children('.pervius').addClass('active');
-                back.eq(back.length - 1).children('.pervius').addClass('active-anim-back');
+                back.eq(back.length - 1).children('.pervius').addClass('active active-anim-back');
                 back.eq(back.length - 1).children('.pervius').removeClass('pervius');
                 
-                back.eq(back.length - 1).children('.pervius-reflect').addClass('active-reflect');
-                back.eq(back.length - 1).children('.pervius-reflect').addClass('active-reflect-anim-back');
+                back.eq(back.length - 1).children('.pervius-reflect').addClass('active-reflect active-reflect-anim-back');
                 back.eq(back.length - 1).children('.pervius-reflect').removeClass('pervius-reflect');
                 
+                
+                //это для того, что бы не перекрывалася картинка предыдущей при листинге назад
                 $('.active-li').css({
                     zIndex: 1001
                 });

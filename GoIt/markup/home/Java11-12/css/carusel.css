@@ -4,6 +4,10 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 
+div{
+    width: 100%
+}
+
 .carusel input:focus, 
 .carusel button:focus, 
 .carusel textArea:focus{
@@ -112,11 +116,12 @@ REFLECTION FIX TANSITION !!!
    20%{
         left: 20px;
         bottom: -50px;    
+        transform: rotate(-15deg) scale(0.79) skew(45deg) translate(30px) scaleY(-1) perspective(100px) rotate3d(1, 0, 0, -30deg);
     }
    40%{
         left: -14px;
         bottom: -60px;
-        transform: rotate(-10deg) scale(0.79) skew(45deg) translate(30px) scaleY(-1) perspective(100px) rotate3d(1, 0, 0, -30deg);
+        transform: rotate(-5deg) scale(0.79) skew(45deg) translate(30px) scaleY(-1) perspective(100px) rotate3d(1, 0, 0, -30deg);
     }
     60%{
         left: -24px;
@@ -303,6 +308,7 @@ REFLECTION FIX TANSITION !!!
     position: relative;
     transition: all 0.4s linear;
     transform: perspective(700px) rotate3d(0, 1, 0, 74deg);
+    -webkit-transform: perspective(700px) rotate3d(0, 1, 0, 74deg);
 }
 .pervius img{
     width: 479px;

@@ -6,5 +6,7 @@
 
 
 $(function () {
-    $('.carusel').carusel();
+    $('.carusel').carusel({
+        reflection: false
+    });
 });
