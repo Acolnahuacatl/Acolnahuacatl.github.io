@@ -3,8 +3,5 @@ Icon=repository
 
 [Dolphin]
 PreviewsShown=true
-Timestamp=2016,1,29,19,9,11
+Timestamp=2016,1,31,18,20,9
 Version=3
-
-[Settings]
-HiddenFilesShown=true
