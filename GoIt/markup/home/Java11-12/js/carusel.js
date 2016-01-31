@@ -3,10 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-$(function() {
-    console.log($(document).width());
-});
-
 (function ($) {
     $.fn.carusel = function(options) {
         //над опциями будем сооброжать потом
@@ -20,7 +16,6 @@ $(function() {
         var wrapperImg = $('.carusel div');
 
         wrapperImg.addClass('carusel-wrapper');
-            //var left = 65;
 
         for (var i = 0, left = 75; i < list.length; i++) {
             var index = 1000 - i;
@@ -37,7 +32,6 @@ $(function() {
             reflect.insertAfter(wrapperImg[i]);
             wrapperImg.eq(i+1).addClass('following');
             list.eq(i+1).addClass('following-li');
-
             reflect.addClass('reflect');
         }
 
@@ -52,7 +46,6 @@ $(function() {
         wrapperImg.eq(0).addClass('active');
         wrapperImg.eq(0).siblings('.reflect').addClass('active-reflect');
 
-
         /* Расставили класы и прочее неподобство */
 
         /* Соображаем дальше*/
@@ -66,9 +59,7 @@ $(function() {
         $('.carusel').append(backwardButton);
         $('.carusel').append(counter);
 
-
         // а это потом повесим на кнопку
-        
         
         function forward() {
             
@@ -124,8 +115,6 @@ $(function() {
                 next.eq(0).children('.following-reflect').addClass('active-reflect');
                 next.eq(0).children('.following-reflect').addClass('active-reflect-anim-forward');
                 next.eq(0).children('.following-reflect').removeClass('following-reflect');
-                
-                
             };
         };
         
@@ -149,8 +138,6 @@ $(function() {
                         top: 175 + 'px'
                     });
                     shift = shift + 3;
-
-                    
                 };
                 
                 following.eq(0).children('.active').addClass('following');
@@ -185,7 +172,7 @@ $(function() {
                 back.eq(back.length - 1).children('.pervius').addClass('active');
                 back.eq(back.length - 1).children('.pervius').addClass('active-anim-back');
                 back.eq(back.length - 1).children('.pervius').removeClass('pervius');
-
+                
                 back.eq(back.length - 1).children('.pervius-reflect').addClass('active-reflect');
                 back.eq(back.length - 1).children('.pervius-reflect').addClass('active-reflect-anim-back');
                 back.eq(back.length - 1).children('.pervius-reflect').removeClass('pervius-reflect');
@@ -196,7 +183,13 @@ $(function() {
             };
         };
         
-        //нечто вышло, осталось поработать с анимацией при листинге назад 
+        //нечто вышло, осталось поработать с анимацией при листинге назад... Ok
+        //добавим зум, ведь как же без него.
+        function zoom() {
+            alert('zoom');
+        }
+        
+        //и повесим его на 'active', но так как active... думаем как 
         
         $('.forward').on('click', forward);
         $('.backward').on('click', backward);

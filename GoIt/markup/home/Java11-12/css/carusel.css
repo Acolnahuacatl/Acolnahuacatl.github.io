@@ -4,7 +4,9 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 
-input:focus, button:focus, textArea:focus{
+.carusel input:focus, 
+.carusel button:focus, 
+.carusel textArea:focus{
     outline: none;
 }
 .carusel{
@@ -21,14 +23,11 @@ input:focus, button:focus, textArea:focus{
     transition: all 0.4s linear;
 }
 
-
 /*FIX ROTATION TRANSITION for IMG*/
 
 @keyframes following-go-active{
     from{
         transform: perspective(1000px) rotate3d(0, 1, 0, -80deg);
-        //margin: 0 auto;
-        //position: relative;
     }
     to{
         transform: perspective(1000px) rotate3d(0, 1, 0, -0deg);
@@ -36,7 +35,6 @@ input:focus, button:focus, textArea:focus{
 }
 
 /*FIX rotation from pervius to active*/
-
 
 @keyframes pervius-go-active{
     from{
@@ -58,7 +56,6 @@ input:focus, button:focus, textArea:focus{
     }
 }
 
-
 .carusel-wrapper img{
     width: 300px;
     position: relative;
@@ -68,35 +65,15 @@ input:focus, button:focus, textArea:focus{
     transition: all 0.4s linear;
 }
 
-
 .carusel li{
     position: absolute;
     top: 175px;
 }
 
-
-            /*REFLECTION FIX TANSITION !!!*/ 
-// Без этих коррекций анимация перехода ведет себя непредсказуемо
-
-/*TRANSITION FIX from active to following*/
-
-/*@keyframes active-to-following{
-    0%{
-        left: -34px;
-        bottom: -90px;
-        transform: rotate(0deg) scale(0.72) skew(-42deg) translate(0px) scaleY(-1) perspective(200px) rotate3d(1, 0, 0, -30deg);
-    }
-    80%{
-        //left: 10px;
-        //bottom: -35px;
-        transform: rotate(70deg) scale(0.799) skew(-54deg) translate(-14px) scaleY(-1) perspective(180px) rotate3d(1, 0, 0, -30deg);
-    }
-    100%{
-        left: 10px;
-        bottom: -35px;
-        transform: rotate(37deg) scale(0.799) skew(-54deg) translate(-14px) scaleY(-1) perspective(100px) rotate3d(1, 0, 0, -30deg);
-    }
-}*/
+/*
+REFLECTION FIX TANSITION !!!
+ Без этих коррекций анимация перехода ведет себя непредсказуемо (P.S. сюда лучше вообще не лезть с правками)
+*/
 
 /*TRANSITION FIX from folliwing to active*/
 
@@ -119,7 +96,7 @@ input:focus, button:focus, textArea:focus{
     100%{
         left: -34px;
         bottom: -90px;
-        transform: rotate(0deg) scale(0.72) skew(-40deg) translate(0px) scaleY(-1) perspective(200px) rotate3d(1, 0, 0, -30deg);
+        rotate(-0deg) scale(0.72) skew(-42deg) translate(0px) scaleY(-1) perspective(200px) rotate3d(1, 0, 0, -30deg);
     }
 }
 
@@ -134,13 +111,13 @@ input:focus, button:focus, textArea:focus{
     }
    20%{
         left: 20px;
-        bottom: -50px;    }
+        bottom: -50px;    
+    }
    40%{
         left: -14px;
         bottom: -60px;
         transform: rotate(-10deg) scale(0.79) skew(45deg) translate(30px) scaleY(-1) perspective(100px) rotate3d(1, 0, 0, -30deg);
     }
-    
     60%{
         left: -24px;
         bottom: -70px;
@@ -184,7 +161,6 @@ input:focus, button:focus, textArea:focus{
         left: 38px;
         bottom: -28px;
         transform: rotate(-15deg)scale(0.75) skew(44deg) translate(-5px) scaleY(-1) perspective(110px) rotate3d(1, 0, 0, -30deg);
-        
     }
     90%{
         left: 38px;
@@ -258,7 +234,6 @@ input:focus, button:focus, textArea:focus{
     filter: blur(3px);
     filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
     transform: rotate(37deg) scale(0.799) skew(-54deg) translate(-14px) scaleY(-1) perspective(100px) rotate3d(1, 0, 0, -30deg);
-    //animation:  active-to-following 0.4s linear;
     transition: all 0.4s linear;
 }
 .following-reflect img{
@@ -281,11 +256,9 @@ input:focus, button:focus, textArea:focus{
 }
 .active-anim-forward{
     animation: following-go-active 0.4s linear;
-    
 }
 .active-anim-back{
     animation: pervius-go-active 0.4s linear;
-    
 }
 .active img{
     width: 500px;
