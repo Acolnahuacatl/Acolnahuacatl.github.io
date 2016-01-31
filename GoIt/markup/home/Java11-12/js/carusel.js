@@ -99,6 +99,7 @@ $(function() {
                 pervius.eq(pervius.length - 1).children('.active').removeClass('active');
                 
                 pervius.eq(pervius.length - 1).children('.active-reflect').addClass('pervius-reflect');
+                pervius.eq(pervius.length - 1).children('.active-reflect').removeClass('active-reflect-anim-forward');
                 pervius.eq(pervius.length - 1).children('.active-reflect').removeClass('active-reflect');
 
                 for ( var i = 0, shift = 72; i < next.length; i++) {
@@ -121,6 +122,7 @@ $(function() {
                 next.eq(0).children('.following').removeClass('following');
 
                 next.eq(0).children('.following-reflect').addClass('active-reflect');
+                next.eq(0).children('.following-reflect').addClass('active-reflect-anim-forward');
                 next.eq(0).children('.following-reflect').removeClass('following-reflect');
                 
                 
@@ -157,6 +159,7 @@ $(function() {
                 following.eq(0).children('.active').removeClass('active');
                 
                 following.eq(0).children('.active-reflect').addClass('following-reflect');
+                following.eq(0).children('.active-reflect').removeClass('active-reflect-anim-back');
                 following.eq(0).children('.active-reflect').removeClass('active-reflect');
                 
                 //эта часть готова (правда опять прийдеться скоректировать анимашку
@@ -184,6 +187,7 @@ $(function() {
                 back.eq(back.length - 1).children('.pervius').removeClass('pervius');
 
                 back.eq(back.length - 1).children('.pervius-reflect').addClass('active-reflect');
+                back.eq(back.length - 1).children('.pervius-reflect').addClass('active-reflect-anim-back');
                 back.eq(back.length - 1).children('.pervius-reflect').removeClass('pervius-reflect');
                 
                 $('.active-li').css({
