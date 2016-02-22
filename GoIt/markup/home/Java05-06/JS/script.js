@@ -32,68 +32,48 @@ var app = {
         
         var scoreboard = document.querySelector('.scoreboard');
         
-        function timer() {
-            if (number[3] > 999) {
-                number[3] = '000';
-                number[2]++;
-                number[2] = '0' + number[2];
-                if (number[2] > 9) {
-                    number[2] = number[2]++;
-                }
-                if (number[2] > 59) {
-                    number[2] = '00';
-                    number[1]++;
-                    number[1] = '0' + number[1];
-                    if (number[1] > 9) {
-                        number[1] = number[1]++;
-                    }
-                    if (number[1] > 59) {
-                        number[1] = '00';
-                        number[0]++;
-                        number[0] = '0' + number[0];
-                        if (number[0] > 9) {
-                            number[0] = number[0]++;
-                            if (number[0] >= 59) {
-                            }
-                                clearInterval(timerOn);
-                        }
-                    }
-                }
-            } else {
-                var result = number[0]+':'+number[1]+':'+number[2]+'.'+number[3];
-                scoreboard.value = result;
-                number[3]++;
-                number[3] = '00' + number[3];
-                if (number[3] > 9) {
-                    number[3]++;
-                    number[3] = '0' + number[3];
-                }
-                if (number[3] > 99) {
-                    number[3] = number[3]++;
-                    
-                }
-            }
-        }
-        
         function start() {
             
-             clickAudio.play();
+            clickAudio.play();
+            var date1 = new Date();
+            
             if (this.className.match('active')) {
                 this.classList.remove('button-active');
             } else {
                     
-                    this.classList.add('button-active');
+                this.classList.add('button-active');
             }
             
             if (counter === 0) {
-                counter++;
+                counter = 1;
                 startDesc.innerHTML = 'Pause';
+                
+                function timer () {
+                    
+                    var date2 = new Date();
+                    var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+                    var diffDate = new Date(timeDiff);  
+
+                    var milliseconds = '000';
+                     if (diffDate.getMilliseconds() > 9) {
+                        milliseconds = '0' + diffDate.getMilliseconds();
+                    } if (diffDate.getMilliseconds() > 99) {
+                        milliseconds = '' + diffDate.getMilliseconds();
+                    } if (diffDate.getMilliseconds() > 999) {
+                        milliseconds = '00';
+                    }
+                    var time = diffDate.toUTCString().replace(/.*([0-9][0-9]:[0-9][0-9]:[0-9][0-9]).*/,'$1');
+                    
+                    scoreboard.value =  time + ":" + milliseconds;//diffDate.getMilliseconds().replace(/.*([0-9][0-9][0-9]).*/,'$1');
+                    
+                }
                 timerOn = setInterval(timer, 1);
                 
             } else {
                 clearInterval(timerOn);
                 startDesc.innerHTML = 'Start';
                 counter = 0;
+                
             }
             
             stopButton.classList.remove('button-active');
