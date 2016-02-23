@@ -7,6 +7,8 @@
 var counter = 0;
 var timerOn;
 var splitCounter = 1;
+var flag = true;
+var resumeResult;
 
 var app = {
     event: function () {
@@ -38,42 +40,67 @@ var app = {
             if (this.className.match('active')) {
                 this.classList.remove('button-active');
             } else {
-                    
                 this.classList.add('button-active');
             }
-            
-                function timer () {
-                    if (counter === 1) {
-                        var date2 = new Date();
-                        var timeDiff = Math.abs(date2.getTime() - date1.getTime());
-                        var diffDate = new Date(timeDiff);  
-                        var milliseconds = '000';
                         
-                         if (diffDate.getMilliseconds() > 9) {
-                            milliseconds = '0' + diffDate.getMilliseconds();
-                        } if (diffDate.getMilliseconds() > 99) {
-                            milliseconds = diffDate.getMilliseconds();
-                        } if (diffDate.getMilliseconds() > 999) {
-                            milliseconds = '00';
-                        }
-                        
-                        console.log(milliseconds);
-                        scoreboard.value = diffDate.toUTCString().replace(/.*([0-9][0-9]:[0-9][0-9]:[0-9][0-9]).*/,'$1') + "." + milliseconds;
-                    } 
-                }; // end timer
+            function timer () {
+                if (flag === false) {
+                    var date2 = new Date();
+                    var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+                    var diffDate = new Date(timeDiff);  
+                    var milliseconds = '000';
+
+                     if (diffDate.getMilliseconds() > 9) {
+                        milliseconds = '0' + diffDate.getMilliseconds();
+                    } if (diffDate.getMilliseconds() > 99) {
+                        milliseconds = diffDate.getMilliseconds();
+                    } if (diffDate.getMilliseconds() > 999) {
+                        milliseconds = '00';
+                    }
+
+                    scoreboard.value = diffDate.toUTCString().replace(/.*([0-9][0-9]:[0-9][0-9]:[0-9][0-9]).*/,'$1') + "." + milliseconds;;
+
+                    playResult =  timeDiff;
+                    resumeResult = playResult;
+
+                } if (flag === true) {
+                    var date2 = new Date();
+                    var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+                    var timeDiffResume = timeDiff + playResult;
+                    var diffDate = new Date(timeDiffResume);  
+                    var milliseconds = '000';
+
+                     if (diffDate.getMilliseconds() > 9) {
+                        milliseconds = '0' + diffDate.getMilliseconds();
+                    } if (diffDate.getMilliseconds() > 99) {
+                        milliseconds = diffDate.getMilliseconds();
+                    } if (diffDate.getMilliseconds() > 999) {
+                        milliseconds = '00';
+                    }
+
+                    scoreboard.value = diffDate.toUTCString().replace(/.*([0-9][0-9]:[0-9][0-9]:[0-9][0-9]).*/,'$1') + "." + milliseconds;;
+                    resumeResult =  timeDiffResume;
+                }
+            }; // end timer
                 
             if (counter === 0) {
-                
-                var date1 = new Date();
                 counter = 1;
+                var playResult;
+                var date1 = new Date();
+                
                 startDesc.innerHTML = 'Pause';
+                timerOn = setInterval(timer, 1);
                 
                 if (scoreboard.value === '00:00:00.000') {   
-                    timerOn = setInterval(timer, 1);
+                    flag = false;
                 }
                 
+                playResult = resumeResult;
+                
             } else {
+                clearTimeout(timerOn);
                 startDesc.innerHTML = 'Start';
+                flag = true;
                 counter = 0;
             }
             
