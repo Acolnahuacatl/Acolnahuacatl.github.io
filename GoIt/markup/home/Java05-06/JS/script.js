@@ -7,7 +7,7 @@
 var counter = 0;
 var timerOn;
 var splitCounter = 1;
-var flag = true;
+var flag = false;
 var resumeResult;
 
 var app = {
@@ -44,43 +44,29 @@ var app = {
             }
                         
             function timer () {
-                if (flag === false) {
                     var date2 = new Date();
-                    var timeDiff = Math.abs(date2.getTime() - date1.getTime());
-                    var diffDate = new Date(timeDiff);  
                     var milliseconds = '000';
-
-                     if (diffDate.getMilliseconds() > 9) {
-                        milliseconds = '0' + diffDate.getMilliseconds();
-                    } if (diffDate.getMilliseconds() > 99) {
-                        milliseconds = diffDate.getMilliseconds();
-                    } if (diffDate.getMilliseconds() > 999) {
-                        milliseconds = '00';
-                    }
-
-                    scoreboard.value = diffDate.toUTCString().replace(/.*([0-9][0-9]:[0-9][0-9]:[0-9][0-9]).*/,'$1') + "." + milliseconds;;
-
+                    var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+                    
+                if (flag) {
+                    var diffDate = new Date(timeDiff);  
                     playResult =  timeDiff;
                     resumeResult = playResult;
-
-                } if (flag === true) {
-                    var date2 = new Date();
-                    var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+                } else  {
                     var timeDiffResume = timeDiff + playResult;
                     var diffDate = new Date(timeDiffResume);  
-                    var milliseconds = '000';
-
-                     if (diffDate.getMilliseconds() > 9) {
-                        milliseconds = '0' + diffDate.getMilliseconds();
-                    } if (diffDate.getMilliseconds() > 99) {
-                        milliseconds = diffDate.getMilliseconds();
-                    } if (diffDate.getMilliseconds() > 999) {
-                        milliseconds = '00';
-                    }
-
-                    scoreboard.value = diffDate.toUTCString().replace(/.*([0-9][0-9]:[0-9][0-9]:[0-9][0-9]).*/,'$1') + "." + milliseconds;;
                     resumeResult =  timeDiffResume;
                 }
+                 if (diffDate.getMilliseconds() > 9) {
+                    milliseconds = '0' + diffDate.getMilliseconds();
+                } if (diffDate.getMilliseconds() > 99) {
+                    milliseconds = diffDate.getMilliseconds();
+                } if (diffDate.getMilliseconds() > 999) {
+                    milliseconds = '00';
+                }
+
+                scoreboard.value = diffDate.toUTCString().replace(/.*([0-9][0-9]:[0-9][0-9]:[0-9][0-9]).*/,'$1') + "." + milliseconds;;
+
             }; // end timer
                 
             if (counter === 0) {
@@ -92,7 +78,7 @@ var app = {
                 timerOn = setInterval(timer, 1);
                 
                 if (scoreboard.value === '00:00:00.000') {   
-                    flag = false;
+                    flag = true;
                 }
                 
                 playResult = resumeResult;
@@ -100,7 +86,7 @@ var app = {
             } else {
                 clearTimeout(timerOn);
                 startDesc.innerHTML = 'Start';
-                flag = true;
+                flag = false;
                 counter = 0;
             }
             
