@@ -284,7 +284,6 @@ nav{
     height: 432px;
     z-index: 0;
     animation: media 10s infinite linear;
-    //animation-play-state: paused;
 }
 .active-img-copy{
     position: absolute;
@@ -297,7 +296,6 @@ nav{
     filter: blur(3px);
     z-index: 0;
     animation: media2 10s infinite linear;
-    //animation-play-state: paused;
 }
 @keyframes play{
     0%{
@@ -377,8 +375,8 @@ nav{
     width: 960px;
 }
 .about{
-    //display: inline-block;
-    //width: 288px;
+    /*display: inline-block;
+    //width: 288px;*/
     float: left;
     width: 33.33%;
     padding: 77px 0 0 62px;
@@ -703,7 +701,6 @@ footer{
     background: url(../img/footer.JPG) no-repeat;
 }
 footer .foot-nav, .designet{
-    //display: inline-block;
 }
 .foot-nav{
     float: left;
