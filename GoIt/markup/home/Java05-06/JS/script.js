@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 
-var number = ['00','00','00','000'];
 var counter = 0;
 var timerOn;
 var splitCounter = 1;
@@ -35,7 +34,6 @@ var app = {
         function start() {
             
             clickAudio.play();
-            var date1 = new Date();
             
             if (this.className.match('active')) {
                 this.classList.remove('button-active');
@@ -44,41 +42,46 @@ var app = {
                 this.classList.add('button-active');
             }
             
+                function timer () {
+                    if (counter === 1) {
+                        var date2 = new Date();
+                        var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+                        var diffDate = new Date(timeDiff);  
+                        var milliseconds = '000';
+                        
+                         if (diffDate.getMilliseconds() > 9) {
+                            milliseconds = '0' + diffDate.getMilliseconds();
+                        } if (diffDate.getMilliseconds() > 99) {
+                            milliseconds = diffDate.getMilliseconds();
+                        } if (diffDate.getMilliseconds() > 999) {
+                            milliseconds = '00';
+                        }
+                        
+                        console.log(milliseconds);
+                        scoreboard.value = diffDate.toUTCString().replace(/.*([0-9][0-9]:[0-9][0-9]:[0-9][0-9]).*/,'$1') + "." + milliseconds;
+                    } 
+                }; // end timer
+                
             if (counter === 0) {
+                
+                var date1 = new Date();
                 counter = 1;
                 startDesc.innerHTML = 'Pause';
                 
-                function timer () {
-                    
-                    var date2 = new Date();
-                    var timeDiff = Math.abs(date2.getTime() - date1.getTime());
-                    var diffDate = new Date(timeDiff);  
-
-                    var milliseconds = '000';
-                     if (diffDate.getMilliseconds() > 9) {
-                        milliseconds = '0' + diffDate.getMilliseconds();
-                    } if (diffDate.getMilliseconds() > 99) {
-                        milliseconds = '' + diffDate.getMilliseconds();
-                    } if (diffDate.getMilliseconds() > 999) {
-                        milliseconds = '00';
-                    }
-                    var time = diffDate.toUTCString().replace(/.*([0-9][0-9]:[0-9][0-9]:[0-9][0-9]).*/,'$1');
-                    
-                    scoreboard.value =  time + ":" + milliseconds;//diffDate.getMilliseconds().replace(/.*([0-9][0-9][0-9]).*/,'$1');
-                    
+                if (scoreboard.value === '00:00:00.000') {   
+                    timerOn = setInterval(timer, 1);
                 }
-                timerOn = setInterval(timer, 1);
                 
             } else {
-                clearInterval(timerOn);
                 startDesc.innerHTML = 'Start';
                 counter = 0;
-                
             }
             
             stopButton.classList.remove('button-active');
             splitButton.classList.remove('button-active');
-        }
+            
+        } // end START
+        
         function split() {
             var splitParent = document.querySelector('.split-wrapper');
             var splitResul = document.createElement('p');
@@ -89,11 +92,9 @@ var app = {
             
             clickAudio.play();
             splitCounter++;
-        }
+        } //END SPLIT
         
         function stop() {
-            number[0], number[1], number[2] = '00';
-            number[3] = '000';
             splitParent.innerHTML = '';
             clickAudio.play();
             clearInterval(timerOn);
