@@ -12,6 +12,9 @@ and open the template in the editor.
         <link type="image/x-icon" rel="shortcut icon" href="img/cover/RedFox.png">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
+        <script src="script/jquery.js"></script>
+        <script src="script/jquery.nicescroll.js"></script>
+        <script src="script/script.js"></script>
     </head>
     <body>
         <header class="main-header">
@@ -34,30 +37,109 @@ and open the template in the editor.
                 </p>
             </div>
         </header>
-        <aside>
-            <ul>
-                <li><a href="#">Пункт 1</a>
-                    <ul>
-                        <li><a href="#">Подменю</a></li>
-                        <li><a href="#">Подменю</a></li>
-                        <li><a href="#">Подменю</a></li>
-                        <li><a href="#">Подменю</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Пункт 2</a></li>
-                <li><a href="#">Пункт 3</a></li>
-                <li><a href="#">Пункт 4</a></li>
-                <li><a href="#">Пункт 5</a></li>
-            </ul>
-        </aside>
-        <div class="main-content">
+        <div class="content">
             
+            <aside class="main-menu inline">
+                <ul>
+                    <li><a href="#">Пункт 1 <span> &blacktriangledown;</span></a>
+                        <ul class="main-submenu">
+                            <li><a href="#">Подменю</a></li>
+                            <li><a href="#">Подменю</a></li>
+                            <li><a href="#">Подменю</a></li>
+                            <li><a href="#">Подменю</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="#">Пункт 2 <span> &blacktriangledown;</span></a>
+                        <ul class="main-submenu">
+                            <li><a href="#">Подменю</a></li>
+                            <li><a href="#">Подменю</a></li>
+                            <li><a href="#">Подменю</a></li>
+                            <li><a href="#">Подменю</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Пункт 3 <span> &blacktriangledown;</span></a>
+                        <ul class="main-submenu">
+                            <li><a href="#">Подменю</a></li>
+                            <li><a href="#">Подменю</a></li>
+                            <li><a href="#">Подменю</a></li>
+                            <li><a href="#">Подменю</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Пункт 5</a></li>
+                </ul>
+            </aside>
+            <div class="main-content inline">
+                <h2>Популярные товары:</h2>
+                <figure class="item">
+                    <figcaption class="item-name">Товар №1 </figcaption>
+                    <a href="#" class="prpduct-photo-wrapper"><img src="img/photo.jpg" alt=""></a>
+                    <div class="description">
+                        
+                        <p class="name">Наименование: <span></span></p>
+                        <p class="dimensions">Габариты (ШхВхД): <span></span></p>
+                        <p class="color">Цвет: <span></span></p>
+                        <p class="price">Стоимость:<span></span></p>
+                        <a href="#">Подробнее...</a>
+                    </div>
+                </figure>
+                <figure class="item">
+                    <figcaption class="item-name">Товар №2 </figcaption>
+                    <a href="#" class="prpduct-photo-wrapper"><img src="img/photo.jpg" alt=""></a>
+                    <div class="description">
+                        
+                        <p class="name">Наименование: <span></span></p>
+                        <p class="dimensions">Габариты (ШхВхД): <span></span></p>
+                        <p class="color">Цвет: <span></span></p>
+                        <p class="price">Стоимость:<span></span></p>
+                        <a href="#">Подробнее...</a>
+                    </div>
+                </figure>
+                <figure class="item">
+                    <figcaption class="item-name">Товар №3 </figcaption>
+                    <a href="#" class="prpduct-photo-wrapper"><img src="img/photo.jpg" alt=""></a>
+                    <div class="description">
+                        
+                        <p class="name">Наименование: <span></span></p>
+                        <p class="dimensions">Габариты (ШхВхД): <span></span></p>
+                        <p class="color">Цвет: <span></span></p>
+                        <p class="price">Стоимость:<span></span></p>
+                        <a href="#">Подробнее...</a>
+                    </div>
+                </figure>
+                <figure class="item">
+                    <figcaption class="item-name">Товар №4 </figcaption>
+                    <a href="#" class="prpduct-photo-wrapper"><img src="img/photo.jpg" alt=""></a>
+                    <div class="description">
+                        
+                        <p class="name">Наименование: <span></span></p>
+                        <p class="dimensions">Габариты (ШхВхД): <span></span></p>
+                        <p class="color">Цвет: <span></span></p>
+                        <p class="price">Стоимость:<span></span></p>
+                        <a href="#">Подробнее...</a>
+                    </div>
+                </figure>
+                <figure class="item">
+                    <figcaption class="item-name">Товар №5 </figcaption>
+                    <a href="#" class="prpduct-photo-wrapper"><img src="img/photo.jpg" alt=""></a>
+                    <div class="description">
+                        
+                        <p class="name">Наименование: <span></span></p>
+                        <p class="dimensions">Габариты (ШхВхД): <span></span></p>
+                        <p class="color">Цвет: <span></span></p>
+                        <p class="price">Стоимость:<span></span></p>
+                        <a href="#">Подробнее...</a>
+                    </div>
+                </figure>
+                    
+                <div class="prew-wrapper">
+                </div>
+            </div>
         </div>
         <footer>
             <span>
                 AboutUs
             </span>
         </footer>
-        <div>TODO write content</div>
     </body>
 </html>

@@ -56,3 +56,6 @@ input:active, button:active, textArea:active{
 input:focus, button:focus, textArea:focus{
     outline: none;
 }
+* {
+    box-sizing: border-box;
+}
