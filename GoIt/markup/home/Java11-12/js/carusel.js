@@ -17,7 +17,7 @@
                 }
         };
         
-        var settings = $.extend(defaults, options);  // берет поля из options и записывает в defoult
+        var settings = $.extend(defaults, options);  // берет поля из options и записывает в def
         
         var caruselImg = $('img');
         console.log(caruselImg);
@@ -34,11 +34,11 @@
         for (var i = 0, left = 75; i < list.length; i++) {
             var index = 1000 - i;
             var src = caruselImg.eq(i).attr('src');
-            if (settings.reflection) {
+            //if (settings.reflection) {
                 var reflect = $('<div><img src="'+ (src) +'" alt=""></div>');
-                reflect.insertAfter(wrapperImg[i]);
+                reflect.insertBefore(wrapperImg[i]);
                 reflect.addClass('reflect');
-            }
+           // }
             
             list.eq(i).css({
                 zIndex: index,
