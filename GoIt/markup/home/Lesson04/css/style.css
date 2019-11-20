@@ -135,7 +135,6 @@ html .nav li{
     font-weight: bold;
     color: #fff;
     text-decoration: none;
-    transition: 2s;
     
 }
 .nav ul li:first-child{
@@ -146,6 +145,7 @@ html .nav li{
     background-image: -webkit-gradient(linear, 0% 0%, 0% 95%, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0)));
     background-image: -moz-linear-gradient(-90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
     background-image: -o-linear-gradient(-90deg,rgba(255,255,255,0.5),rgba(255,255,25,0));
+    transition: all 2s;
 }
 ul.travel, 
 ul.services, 
@@ -172,6 +172,7 @@ ul.partners{
 .nav li:hover ul.services,
 .nav li:hover ul.partners{
     display: block;
+    transition: all 2s;
 }
 
 
@@ -180,6 +181,7 @@ ul.partners{
     background-image: -webkit-gradient(linear, 0% 0%, 0% 95%, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0)));
     background-image: -moz-linear-gradient(-90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
     background-image: -o-linear-gradient(-90deg,rgba(255,255,255,0.5),rgba(255,255,25,0));
+    transition: all 2s;
 }
 /*NAVIGATION MENU END*/
 .content_wrapper{
