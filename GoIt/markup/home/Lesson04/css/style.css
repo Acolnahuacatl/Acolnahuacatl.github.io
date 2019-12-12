@@ -165,14 +165,17 @@ ul.partners{
 ul.travel, 
 ul.services, 
 ul.partners{
-    display: none;
+    display: block;
     padding: 0;
+    height: 0px;
+    overflow: hidden;
 }
 .nav li:hover ul.travel,
 .nav li:hover ul.services,
 .nav li:hover ul.partners{
-    display: block;
-    transition: all 2s;
+/*    display: block;*/
+    height: 135px;
+    transition: all .2s;
 }
 
 
