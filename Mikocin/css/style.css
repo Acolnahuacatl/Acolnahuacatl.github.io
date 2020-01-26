@@ -905,7 +905,9 @@ h4{
 .use_wrapper.ul,
 .mikocin_glass{
     width: 50%;
-    border: 1px solid black
+    background: url('../img/mikocin_use.png') no-repeat center;
+    
+    background-size: contain
 }
 
 
@@ -913,7 +915,7 @@ h4{
 .border-outside{
     height: 130px;
     width: 130px;
-    border: 8px solid #ede4da;
+    border: 8px solid #ede4da;  
     border-radius: 50%;
 }
 
@@ -947,7 +949,9 @@ h4{
     background: url('../img/calendar_ico.png') no-repeat center white;
 }
 
-.use_description p:before{
+.insert:before,
+.glass:before,
+.days:before{
     content: "";
     display: block;
     position: absolute;
@@ -956,4 +960,8 @@ h4{
     background: #7bbf1c;
     top: 25px;
     left: 28px;
+}
+.glass:before,
+.days:before{
+    top: 40px;
 }
