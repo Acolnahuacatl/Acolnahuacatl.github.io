@@ -37,8 +37,6 @@ header{
         rgba(243,249,255,0.819765406162465) 40%, 
         rgba(243,249,255,0.8225665266106442) 45%, 
         rgba(243,249,255,1) 50%);
-    
-   
 }
 
 
@@ -481,7 +479,7 @@ h3{
     line-height: 50px;
     letter-spacing: 1px;
 }
-.warning>p{
+.warning_description{
     font-size: 24px;
     font-weight: 700;
     line-height: 70px;
@@ -801,7 +799,7 @@ h4{
 }
 .efficiency_descrition_wrapper>div{
     width: 370px;
-    min-width: 340px;
+    width: 340px;
     border: 3px solid red;
     margin: 0 15px;
     border-radius: 8px;
