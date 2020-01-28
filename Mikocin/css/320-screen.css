@@ -8,8 +8,46 @@ and open the template in the editor.
     Author     : solovyov
 */
 
+header{
+    height: 2320px
+}
+
+.header_gradient:before{
+    height: 56%;
+    width: 100%; 
+    z-index: 1;
+    position: absolute;
+    top: 444px;
+    left: 1%;
+    z-index: 2;
+}
 .presentation h2{
     font-size: 32px;
+    margin-right: 0;
+}
+.circle:before{
+    background-size: contain;
+    height: 500px;
+    width: 120%; 
+    top: -90px;
+    left: 90px;
+    
+}
+.description{
+    margin-top: -40px;
+}
+.order{
+    width: 300px;
+    overflow: hidden;
+}
+
+.order:after{
+
+    display: none;
+    height: 0;
+    width: 0;
+    right: 0;
+    top: 0
 }
 
 .review{
@@ -40,9 +78,12 @@ figure{
 
 .pie {
   top: 140px;
-  left: 55px
+  left: 45px
 }
 
 .efficiency_descrition_wrapper>div{
     width: 310px;
+}
+.more_info_wrapper>div{
+    width: 300px
 }

@@ -19,12 +19,14 @@ body{
     /*max-width: 100vw;*/
     overflow-x: hidden;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    position: relative;
 }
 header{
-    height: 680px;
+    height: 730px;
     background: url('../img/header_bg.png') center no-repeat ;
-   
+    /*max-width: 100vw;*/
+    overflow-x: no-display
 }
 
 .header_gradient{
@@ -37,6 +39,7 @@ header{
         rgba(243,249,255,0.819765406162465) 40%, 
         rgba(243,249,255,0.8225665266106442) 45%, 
         rgba(243,249,255,1) 50%);
+    position: relative;
 }
 
 
@@ -47,9 +50,13 @@ header{
 }
 .presentation{
     width: 45%;
+    overflow: hidden; 
 }
 .description{
     width: 55%;
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
 }
 
 .presentation h2{
@@ -110,20 +117,29 @@ header{
     
 }
 
-.circle:after{
+.header_gradient:before{
     content: "";
     display: block;
     background: url('../img/mikocin_main.png') no-repeat;
-    height: 840px;
-    width: 120%; 
+    background-size: contain;
+    height: 56%;
+    width: 41%; 
     z-index: 1;
     position: absolute;
-    top: 230px;
-    right: 245px;
-    transform: rotate(54deg);
+    top: 474px;
+    left: 14%;
     z-index: 2;
 }
 
+.header_gradient:after{
+    content: "";
+    display: block;
+    position: absolute;
+    background: url('../img/content_border_top.png');
+    height: 100px;
+    width: 100%;
+    bottom: -28px;
+}
 /*LEFT SIDE HEADER END*/
 
 .review{
@@ -204,6 +220,7 @@ span{
 }
 .advantages li{
     height: 110px;
+    min-width: 300px;
 }
 .advantages li div,
 .advantages li p{
@@ -269,6 +286,7 @@ span{
     margin-top: 30px;
     width: 276px;
     position: relative;
+    /*overflow: hidden;*/
 }
 
 fieldset{
@@ -452,7 +470,7 @@ input{
     top: 170px
 }
 
-.insert_img::after{
+/*.insert_img::after{
     content: "";
     display: block;
     position: absolute;
@@ -461,7 +479,7 @@ input{
     width: 235vh;
     bottom: -28px;
     left: -280px;
-}
+}*/
 /*END FORM*/
 
 /*HEADER END*/
@@ -492,7 +510,7 @@ h3{
 }
 figure{
     width: 390px;
-    min-width: 340px;
+    min-width: 300px;
     position: relative;
 }
 .img_warning_wrapper{
@@ -657,7 +675,7 @@ figure p:before{
 }
 .more_info_wrapper>div{
     width: 370px;
-    min-width: 340px;
+    min-width: 300px;
     background: white;
     margin: 0 20px;
     padding: 62px 34px 30px;

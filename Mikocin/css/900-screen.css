@@ -9,7 +9,7 @@ and open the template in the editor.
 */
 
 header{
-    height: 1300px;
+    height: 1400px;
     background: url('../img/header_bg.png') top/3500px no-repeat;
 }
 .header_gradient{
@@ -22,7 +22,7 @@ header{
 
 .presentation{
     width: 76%;
-    height: 45%;
+    height: 42%;
 }
 
 .presentation h2{
@@ -30,7 +30,11 @@ header{
     font-size: 42px;
     z-index: 3
 }
-
+.header_gradient:before{
+    width: 65%; 
+    top: 304px;
+    left: 15%;
+}
 .insert_img{
     background-position:-410px -140px ;
 }
@@ -51,21 +55,13 @@ header{
 .order{
     width: 40%;
     margin-left: 5%;
-    min-width: 330px;
+    min-width: 300px;
 }
 
-
-
-
-.description::after{
-    content: "";
-    display: block;
-    position: absolute;
-    background: url('../img/content_border_top.png');
-    height: 50px;
-    width: 100%;
-    bottom: 90px;
+.warning{
+    padding-top: 40px
 }
+
 
 .insert_img::after{
     display: none;

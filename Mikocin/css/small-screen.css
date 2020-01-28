@@ -32,19 +32,13 @@ and open the template in the editor.
     width: 100%; 
     background-size: contain;
     top: -220px;
-    right: -130px;
+    right: -200px;
 }
 
-.circle:after{
-    height: 840px;
-    width: 120%;
-    background-size: contain;
-    top: 100px;
-    right:  255px;
-}
-
-.insert_img::after{
-    bottom: -88px;
+.header_gradient:before{
+    width: 45%; 
+    top: 504px;
+    left: -5%;
 }
 
 .review{
