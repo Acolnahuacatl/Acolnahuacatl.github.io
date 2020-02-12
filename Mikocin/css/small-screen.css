@@ -65,14 +65,14 @@ and open the template in the editor.
 .advantages li{
     height: 100px;
     display: flex;
-    align-items: center
+    align-items: center;
 }
 
 .advantages p{
     width: 245px;
     font-size: 16px;
     line-height: 20px;
-    margin-left: 10px
+    margin-left: 10px;
 }
 
 .advantages_list_style{
@@ -114,7 +114,7 @@ legend{
     width: 50px;
     background-size: contain;
     right: -25px;
-    top: 170px
+    top: 170px;
 }
 
 .more_info_wrapper>div{
@@ -124,7 +124,7 @@ figure{
     margin-bottom: 60px;
 }
 .statistic{
-    margin-top: 10px
+    margin-top: 10px;
 }
 .efficiency_descrition_wrapper>div{
     margin-bottom: 70px;

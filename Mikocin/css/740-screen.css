@@ -54,7 +54,7 @@ header{
 
 
 .warning{
-    padding-top: 50px
+    padding-top: 50px;
 }
 
 .efficiency h3,
@@ -62,18 +62,18 @@ h3{
     font-size: 34px;
     line-height: 36px;
     width: 90%;
-    margin: 20px auto
+    margin: 20px auto;
 }
 
 figure{
-    width: 320px
+    width: 320px;
 }
 figcaption{
     margin: 0;
-    width: 120px
+    width: 120px;
 }
 .pie{
-    left: -30px
+    left: -30px;
 }
 
 .conclusion,
@@ -87,7 +87,7 @@ figcaption{
 
 .conclusion p,
 .statistic p{
-    font-size: 20px
+    font-size: 20px;
 }
 
 .more_info_wrapper>div{
@@ -102,7 +102,7 @@ figcaption{
 
 .gradient_border{
     width: 90%;
-    margin: 20px auto
+    margin: 20px auto;
 }
 
 

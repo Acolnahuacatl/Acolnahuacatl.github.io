@@ -9,7 +9,7 @@ and open the template in the editor.
 */
 
 header{
-    height: 2320px
+    height: 2320px;
 }
 
 .header_gradient:before{
@@ -47,7 +47,7 @@ header{
     height: 0;
     width: 0;
     right: 0;
-    top: 0
+    top: 0;
 }
 
 .review{
@@ -58,7 +58,7 @@ header{
     font-size: 28px;
 }
 .big{
-    font-size: 33px
+    font-size: 33px;
 }
 .big:after{
     content: "";
@@ -78,12 +78,12 @@ figure{
 
 .pie {
   top: 140px;
-  left: 45px
+  left: 45px;
 }
 
 .efficiency_descrition_wrapper>div{
     width: 310px;
 }
 .more_info_wrapper>div{
-    width: 300px
+    width: 300px;
 }
