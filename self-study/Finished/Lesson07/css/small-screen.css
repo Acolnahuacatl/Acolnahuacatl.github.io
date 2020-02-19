@@ -1,0 +1,184 @@
+.head{
+    height: 798px;
+}
+nav, .media, .wrapper{
+    width: 728px;
+}
+nav{
+    height: 244px;
+    padding-bottom: 0px;
+}
+.navigation{
+    float: none;
+}
+.navigation-item{
+    margin: 30px 49px 0 0px;
+}
+.media-text{
+    padding: 0 0 0 22px;
+    
+}
+.media-header{
+    margin: 95px 0px 10px;
+    font-size: 49px
+}
+.paragraph-header{
+    font-size: 21px;
+}
+.media-paragraph{
+    width: 300px;
+    height: 120px;
+    overflow: hidden;
+    font-size: 17px;
+    line-height: 27px;
+}
+.media-active{
+    float: none;
+    position: absolute;
+    top: -5px;
+    right: -42px;
+}
+.arrow-left{
+    left: -22px;
+}
+.arrow-right{
+    right: -22px;
+}
+@keyframes arrow-left{
+    50%{left: -32px;}
+}
+@keyframes arrow-right{
+    50%{right: -32px;}
+}
+.change{
+    margin: 34px 0 0 139px;
+    padding: 0px;
+}
+
+/*HEADER END*/
+
+.about-description-header{
+    font-size: 24px;
+}
+.about-description{
+    overflow: hidden;
+    height: 145px;
+}
+.read-more{
+    margin: 0px 10px;
+}
+
+/*ABOUT END*/
+
+.blog{
+    height: 488px;
+}
+.blog-wrapper{
+    height: 274px;
+}
+.blog-header{
+    font-size: 24px;
+}
+.blog-header span{
+    display: block;
+}
+.blog-paragraph{
+    margin-top: 7px;
+    height: 140px;
+    overflow: hidden;
+}
+.updats-header{
+    font-size: 30px;
+}
+@-moz-document url-prefix()
+{
+    .updates-item a{
+        letter-spacing: -1px;
+    }
+}
+.updates-item p{
+    height: 27px;
+    overflow: hidden;
+}
+.updates-more{
+    margin: 18px 68px;
+    height: 20px;
+    position: relative;
+    text-indent: -9900px
+}
+.updates-more:before{
+    content: "MORE BLOG POSTS";
+    position: absolute;
+    top: 0;
+    left:0;
+    text-indent: 0px;
+    height: 20px;
+    width: 90px;
+}
+
+/*BLOG END*/
+
+.company{
+    text-align: left;
+}
+.com-logo{
+    margin: 2px 0;
+}
+.dc, .tree{
+    margin-left: 50px; 
+}
+.awsm{
+    margin-left: 56px;
+}
+.rvca{
+    margin-left: 53px;
+}
+.vonzipper{
+    margin-left: 47px;
+}
+
+.pigbuller{
+    display: none;
+}
+.only-big-screen{
+    display: none;
+}
+.hidden{
+    display: block;
+}
+.other-info{
+    padding: 100px 0 0;
+}
+.info-wrapper{
+    height: 100%;
+}
+.info-box{
+    width: 28%;
+    margin: 0;
+    padding: 0;
+    height: 200px;
+    overflow: hidden;
+}
+.info-box:nth-child(3){
+    margin: 0 8% 0 8%;
+}
+.other-info:after{
+    z-index: 0;
+    width: 700px;
+    margin: 0 -402px;
+}
+footer{
+    height: 200px;
+    background-size: cover;
+}
+.foot-nav{
+    margin-top: 26px;
+}
+.designet{
+    margin-top: 101px;
+}
+/* 
+    Created on : 20.11.2015, 20:05:55
+    Author     : yaroslav
+*/
+

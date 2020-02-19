@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-right: -10px  
+}
+td{
+    border: 10px solid black;
+    border-top: none;
+}
+table td:first-child{
+    border-left: none;
+}
+table tr:last-child td, .last{
+    border-bottom: none;
+}
+table td:last-child{
+    border-right: none;
+}
+.black{
+    background: black;
+}
+.red{
+    background: red;
+}
+.yellow{
+    background: yellow;
+}
+.blue{
+    background:blue;
+}
+.rectangle{
+    width: 100px;
+}
+tr:first-child{
+    height: 120px;
+}
+tr:nth-child(2), tr:nth-child(3){
+    height: 300px;
+}
+tr:nth-child(4), tr:nth-child(5){
+    height: 150px;
+}
+tr:nth-child(6), tr:nth-child(7){
+    height: 80px;
+}
+
+/* 
+    Created on : 05.11.2015, 12:58:08
+    Author     : yaroslav
+*/
+

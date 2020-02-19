@@ -1,0 +1,141 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27 янв. 2020 г., 20:20:32
+    Author     : solovyov
+*/
+
+
+
+
+.presentation{
+    width: 35%;
+}
+
+.description{
+    width: 65%;
+}
+
+.circle{
+    width: 500px;
+    height: 250px;
+    border: 25px solid white;
+    border-bottom: 0;  
+}
+
+
+.circle:before{
+    height: 540px;
+    width: 100%; 
+    background-size: contain;
+    top: -220px;
+    right: -200px;
+}
+
+.header_gradient:before{
+    width: 45%; 
+    top: 504px;
+    left: -5%;
+}
+
+.review{
+    margin: 20px 4px;
+} 
+
+.number1{
+    margin-right: 10px;
+    width: 240px;
+}
+
+
+.about{
+    width: 320px;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+.about h1{
+    width: 100%;
+}
+
+
+.advantages li{
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.advantages p{
+    width: 245px;
+    font-size: 16px;
+    line-height: 20px;
+    margin-left: 10px;
+}
+
+.advantages_list_style{
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border: 6px solid #e8edc9;
+    font-size: 18px;
+}
+.arrow_up:before{
+    left: 15px;
+}
+
+.plus:before{
+    left: 16px;
+}
+
+.order{
+    margin-top: 10px;
+    width: 240px;
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    border: 5px solid #a7c93d;
+}
+
+legend{
+    border-bottom: 5px solid #a7c93d;
+    border-right: 5px solid #a7c93d;
+    border-left: 5px solid #a7c93d;
+    left: calc(50% - 75px);
+    top: -5px;
+}
+
+.order:after{
+    height: 205px;
+    width: 50px;
+    background-size: contain;
+    right: -25px;
+    top: 170px;
+}
+
+.more_info_wrapper>div{
+    margin-bottom: 50px
+}
+figure{
+    margin-bottom: 60px;
+}
+.statistic{
+    margin-top: 10px;
+}
+.efficiency_descrition_wrapper>div{
+    margin-bottom: 70px;
+}
+.gradient_border{
+    margin-top:  0px;
+}
+
+.use_wrapper{
+    width: 70%;
+    margin: 60px 5%;
+}
+
+

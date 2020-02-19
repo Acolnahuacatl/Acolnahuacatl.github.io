@@ -1,0 +1,29 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27 янв. 2020 г., 20:19:28
+    Author     : solovyov
+*/
+header{
+    height: 2050px;
+    background: url('../img/header_bg.png') top/3500px no-repeat;
+}
+.header_gradient{
+    background: linear-gradient(180deg, 
+        rgba(243,249,255,0.5340511204481793) 0%, 
+        rgba(243,249,255,0.819765406162465) 25%, 
+        rgba(243,249,255,0.8225665266106442) 28%, 
+        rgba(243,249,255,1) 35%);
+}
+.use_description li{
+    flex-direction: column;
+    align-items: center;
+}
+
+.presentation h2{
+    margin-right: 0px;
+    font-size: 44px;
+}

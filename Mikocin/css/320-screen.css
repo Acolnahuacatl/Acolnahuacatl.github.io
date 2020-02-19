@@ -1,0 +1,89 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28 янв. 2020 г., 01:09:02
+    Author     : solovyov
+*/
+
+header{
+    height: 2320px;
+}
+
+.header_gradient:before{
+    height: 56%;
+    width: 100%; 
+    z-index: 1;
+    position: absolute;
+    top: 444px;
+    left: 1%;
+    z-index: 2;
+}
+.presentation h2{
+    font-size: 32px;
+    margin-right: 0;
+}
+.circle:before{
+    background-size: contain;
+    height: 500px;
+    width: 120%; 
+    top: -90px;
+    left: 90px;
+    
+}
+.description{
+    margin-top: -40px;
+}
+.order{
+    width: 300px;
+    overflow: hidden;
+}
+
+.order:after{
+
+    display: none;
+    height: 0;
+    width: 0;
+    right: 0;
+    top: 0;
+}
+
+.review{
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+.description h1{
+    font-size: 28px;
+}
+.big{
+    font-size: 33px;
+}
+.big:after{
+    content: "";
+    display: block;
+}
+
+form{
+    width: 300px;
+    margin: 30px auto;
+}
+
+figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pie {
+  top: 140px;
+  left: 45px;
+}
+
+.efficiency_descrition_wrapper>div{
+    width: 310px;
+}
+.more_info_wrapper>div{
+    width: 300px;
+}

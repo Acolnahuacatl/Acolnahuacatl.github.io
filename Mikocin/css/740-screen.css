@@ -1,0 +1,117 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27 янв. 2020 г., 20:19:47
+    Author     : solovyov
+*/
+
+header{
+    height: 2250px;
+    background: url('../img/header_bg.png') top/3500px no-repeat;
+}
+
+.presentation{
+    width: 79%;
+    height: 600px;
+}
+
+.header_gradient:before{
+    width: 100%; 
+    top: 394px;
+    left: 1%;
+}
+.description{
+    width: 100%;
+    height: 60%;
+    text-align: center;
+    margin: 60px 0;
+    position: relative;
+    
+}
+.review{
+    justify-content: center;
+}
+.about,
+.order{
+    float: none;
+    width: 320px;
+    margin: 10px auto 40px;
+}
+
+.review{
+    flex-wrap: wrap;
+}
+.review li{
+    padding-bottom: 20px;
+}
+
+.description::after{
+    bottom: -160px;
+}
+
+
+.warning{
+    padding-top: 50px;
+}
+
+.efficiency h3,
+h3{
+    font-size: 34px;
+    line-height: 36px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+figure{
+    width: 320px;
+}
+figcaption{
+    margin: 0;
+    width: 120px;
+}
+.pie{
+    left: -30px;
+}
+
+.conclusion,
+.statistic{
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.conclusion p,
+.statistic p{
+    font-size: 20px;
+}
+
+.more_info_wrapper>div{
+    width: 300px;
+    margin: 40px auto;
+}
+
+.efficiency_descrition_wrapper>div{
+    width: 300px;
+    margin: 40px auto
+}
+
+.gradient_border{
+    width: 90%;
+    margin: 20px auto;
+}
+
+
+.use_description p{
+    margin-top: 20px;
+}
+
+.insert:before,
+.glass:before,
+.days:before{
+    top: -5px;
+}
