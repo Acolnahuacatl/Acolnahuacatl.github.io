@@ -1,0 +1,82 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 23 февр. 2020 г., 21:18:09
+    Author     : solovyov
+*/
+
+body {
+  left: 0vw;
+  margin: 0;
+  overflow-x: hidden;
+  position: relative;
+}  
+
+.big-logo-img{
+    display: none;
+}
+header .small-logo-img{
+    display: block;
+    width: 80px;
+    margin-right: calc(100%-270px);
+}
+
+header button{
+
+    margin-left: calc(100% - 320px);
+}
+
+.menu-main>a{
+    display: block;
+    border-right: 2px solid white;
+}
+
+.menu-main{
+    position: relative;
+    width: 60px;
+    margin: 0;
+}
+
+.menu-main-list{
+    display: block;
+    position: fixed;
+    width: 70vw;
+    height: 100vh;
+    margin-bottom: 0;
+    background: gray;
+    left: -70vw;
+}    
+
+.menu-main-list a{
+    border-right: none;
+}
+
+.menu-main-list .close-button{
+    display: block;
+    position: absolute;
+    right: 0;
+    padding: 3px;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    text-shadow: 0 0 4px black
+}
+
+.content-wrapper{
+    flex-direction: column;
+}
+
+.content-wrapper div,
+aside{
+    width: 100%;
+    margin-top: 5px;
+    border: 0;
+}
+
+.feedback-wrapper .feedback{
+    width: 90%;
+    margin: 5%;
+}

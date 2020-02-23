@@ -1,0 +1,196 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 22 февр. 2020 г., 18:46:21
+    Author     : solovyov
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+header,
+.menu-main,
+.menu-main-list,
+.content-wrapper,
+aside,
+.marketing{
+    display: flex;
+}
+
+header{
+    /*display: flex;*/
+    height: 60px;
+    background: #5fa5bb;
+}
+
+
+.big-logo-img,
+.small-logo-img{
+    height: 100%;
+    border-right: 1px solid white;
+    /*align-items: center;*/
+    /*vertical-align: central;*/
+    
+}
+
+
+.big-logo-img{
+    width: 253px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.menu-main>a{
+    display: none;
+    /*display: block;*/
+    height: 60px;
+    padding: 15px;
+    text-align: center;
+    font-size: 28px;
+    color: white;
+}
+.menu-main>a img{
+    height: 30px;
+
+}
+.menu-main{
+    flex: 1 0 auto;
+    /*display: flex;*/
+    /*height: 60px;*/
+}
+
+.menu-main-list a{
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    width: 100px;
+    text-align: center;
+    color: white;
+    text-shadow: 0 1px 2px #404040;
+    border-right: 1px solid white;
+    transition: .2s linear all;
+}
+
+.menu-main-list a:hover{
+    color: black;
+    text-shadow: 0 1px 2px #d9d9d9;
+}
+
+.menu-main-list .close-button{
+    display: none;
+}
+.small-logo-img{
+    width: 90px;
+    font-size: 15px;
+    padding: 5px 10px;
+    text-align: center;
+    display: none;
+}
+
+header button{
+    flex: 0 1 auto;
+    width: 180px;
+    background: #5fa5bb;
+    border: none;
+    border-left: 1px solid white;
+    font-size: 20px;
+    transition: .2s linear all;
+}
+
+header button:hover{
+    background: #0c739f;
+    color: #d9d9d9;
+    cursor: pointer;
+}
+
+.content-wrapper{
+    margin-top: 6px;
+    /*flex-direction: column;*/
+    /*grid-template-columns: 1fr 3fr 1fr;*/
+}
+
+aside,
+.content,
+.marketing{
+    background: #5fa5bb
+}
+
+
+/*aside,
+.marketing{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}*/
+
+aside>p,
+.marketing p{
+    margin: auto
+}
+
+aside{
+    width: 250px;
+    height: 400px
+}
+
+.content{
+    width: calc(100% - 450px);
+    border-right: 6px solid white;
+    border-left: 6px solid white;
+    text-align-last: center;
+}
+
+.content>h2{
+    line-height: 60px;
+}
+
+.feedback{
+    display: flex;
+    align-items: center;
+    margin: 20px 10%
+}
+
+.user-logo{
+    height: 60px;
+    width: 60px;
+    background: url('../img/unnamed.png') white no-repeat 0px/60px;
+}
+
+.user-feedback{
+    display: block;
+    height: 60px;
+    width: 100%;
+    padding-left: 10px;
+    background: #d9d9d9;
+}
+
+
+.feedback-text{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    color: black;
+    text-align: left;
+    float: left;
+}
+
+
+.marketing{
+    width: 200px;
+    height: 800px;
+}
+
+.active{
+    background: #7889b7
+}
