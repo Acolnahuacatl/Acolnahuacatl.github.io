@@ -62,7 +62,8 @@ header button{
     color: white;
     font-size: 20px;
     font-weight: bolder;
-    text-shadow: 0 0 4px black
+    text-shadow: 0 0 4px black;
+    cursor: pointer;
 }
 
 .content-wrapper{
